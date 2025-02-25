@@ -1,0 +1,12 @@
+{
+    "clientKey": "CAP-93BF0B9A68800E2D4F3CF7B585853A90",
+    "task": {
+        "type": "DatadomeSliderTask",
+        "captchaUrl": "https://geo.captcha-delivery.com/captcha/?initialCid=AHrlqAAAAAMAbDWBLhXZF6MAlSg4Cg%3D%3D&hash=46A80E32CDDCFB70225B9AE3E850D5&cid=DPa1s55Gei9sTBZWsYmnSbpZ4iEkXc3HDxk7JQEgWOfKaiWUgo40T0FTrTQRbxTMUNbjxlHThLxC6E~MvThsbzuklbdgIQBbHc~ojTsI04qWnXIFtB9YAlkcI2Gp0RrU&t=fe&referer=https%3A%2F%2Fbrainly.com%2Fquestion%2F48003838&s=9520&e=4291e05615664297710e549bbb2f0ea5e2133f6adcac03dc2f493f3d73e43f7f&dm=cd",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:135.0) Gecko/20100101 Firefox/135.0",
+        "proxy": "http://wr37kDWXUGoa:USMuWej9iXz8@12.176.171.19:8080",
+        "cookies": {
+            "datadome": "DPa1s55Gei9sTBZWsYmnSbpZ4iEkXc3HDxk7JQEgWOfKaiWUgo40T0FTrTQRbxTMUNbjxlHThLxC6E~MvThsbzuklbdgIQBbHc~ojTsI04qWnXIFtB9YAlkcI2Gp0RrU"
+        }
+    }
+}
