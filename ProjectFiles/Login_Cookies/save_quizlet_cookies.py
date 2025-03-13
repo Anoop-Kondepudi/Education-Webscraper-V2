@@ -1,3 +1,11 @@
+# To grab the cookies for Quizlet, you need to log in manually on your browser. (Not selenium browser)
+# Then download the extension: EditThisCookie
+# Go to Quizlet.com and log in again.
+# Click the EditThisCookie extension and export the cookies.
+# Create a new file in Cookies folder called quizlet_cookies.json
+# Paste the cookies into the file.
+# Run the script. (quizlet_scraper.py)
+
 import json
 import time
 import os

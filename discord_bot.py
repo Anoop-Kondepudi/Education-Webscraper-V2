@@ -3,7 +3,7 @@ import re
 import os
 import dotenv
 from discord.ext import commands
-from ProjectFiles.API_Backend import studocu_scraper, quizlet_scraper, brainly_scraper  # Removed homework_scraper import
+from ProjectFiles.API_Backend import studocu_scraper, quizlet_scraper, brainly_scraper, homework_study_scraper  # Added import
 
 # Load environment variables from .env
 dotenv.load_dotenv()
@@ -26,6 +26,7 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 STUDOCU_REGEX = re.compile(r"(https?:\/\/www\.studocu\.com[^\s]*)")
 QUIZLET_REGEX = re.compile(r"(https?:\/\/quizlet\.com[^\s]*)")
 BRAINLY_REGEX = re.compile(r"(https?:\/\/brainly\.[^\s]*)")
+STUDY_REGEX = re.compile(r"(https?:\/\/(?:homework\.)?study\.com[^\s]*)")  # Added pattern
 
 @bot.event
 async def on_ready():
@@ -59,13 +60,17 @@ async def on_message(message):
         await message.channel.send(f"📄 Processing Brainly link: {brainly_url}")
         html_file = brainly_scraper.scrape_brainly(brainly_url)
 
-    else:
-        return  # No supported links
+    # Check if it's a Study.com link
+    elif STUDY_REGEX.search(message.content):
+        study_url = STUDY_REGEX.search(message.content).group(0)
+        await message.channel.send(f"📄 Processing Study.com link: {study_url}")
+        if homework_study_scraper.scrape_homework_study(study_url):
+            filename = study_url.split('/')[-1].replace('.html', '') + '_answer.html'
+            html_file = os.path.join(homework_study_scraper.DOWNLOADS_PATH, filename)
 
-    if html_file:
+    if html_file and os.path.exists(html_file):
         # Send the HTML file back to the user
         await message.channel.send(file=discord.File(html_file))
-
         # Delete the file after sending
         os.remove(html_file)
 
