@@ -4,14 +4,11 @@ import requests
 from bs4 import BeautifulSoup
 from fake_useragent import UserAgent
 import re
+import base64
+import mimetypes
 
-# Use the same Downloads path as the original scraper
 DOWNLOADS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Downloaded Files")
 COOKIES_PATH = os.path.join(os.path.dirname(__file__), "../Cookies/homeworkstudy_cookies.json")
-IMAGES_PATH = os.path.join(DOWNLOADS_PATH, "images")
-
-# Create images directory if it doesn't exist
-os.makedirs(IMAGES_PATH, exist_ok=True)
 
 def get_headers():
     """Generate headers with a random user agent."""
@@ -50,8 +47,13 @@ def load_cookies():
         print(f"Error loading cookies: {e}")
         return None
 
-def download_image(session, img_url, base_url):
-    """Download image and return local path."""
+def get_mime_type(image_url):
+    """Get MIME type from image URL or default to jpeg"""
+    mime_type, _ = mimetypes.guess_type(image_url)
+    return mime_type or 'image/jpeg'
+
+def download_and_encode_image(session, img_url, base_url):
+    """Download image and return base64 encoded data URL."""
     try:
         if img_url.startswith('/'):
             img_url = f"https://study.com{img_url}"
@@ -61,18 +63,15 @@ def download_image(session, img_url, base_url):
         response = session.get(img_url, stream=True)
         response.raise_for_status()
 
-        # Create a filename from the URL
-        img_filename = os.path.basename(img_url.split('?')[0])
-        local_path = os.path.join(IMAGES_PATH, img_filename)
-
-        # Save the image
-        with open(local_path, 'wb') as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
-
-        return f"images/{img_filename}"
+        # Get the image data and encode it
+        image_data = response.content
+        encoded_image = base64.b64encode(image_data).decode('utf-8')
+        mime_type = get_mime_type(img_url)
+        
+        # Return as data URL
+        return f"data:{mime_type};base64,{encoded_image}"
     except Exception as e:
-        print(f"Error downloading image {img_url}: {e}")
+        print(f"Error processing image {img_url}: {e}")
         return img_url
 
 def process_math_equations(html_content):
@@ -85,11 +84,11 @@ def process_content(content, session, base_url):
     """Process HTML content to fix images and equations."""
     soup = BeautifulSoup(content, 'html.parser')
     
-    # Download and update image sources
+    # Convert images to base64
     for img in soup.find_all('img'):
         if img.get('src'):
-            local_path = download_image(session, img['src'], base_url)
-            img['src'] = local_path
+            data_url = download_and_encode_image(session, img['src'], base_url)
+            img['src'] = data_url
 
     # Convert to string and process equations
     processed_content = str(soup)
