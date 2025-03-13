@@ -17,6 +17,7 @@ def setup_driver():
     """Set up and return Firefox WebDriver."""
     options = webdriver.FirefoxOptions()
     options.headless = True  # Run in headless mode
+    options.add_argument("--headless")
     
     # Create Firefox profile first
     profile = webdriver.FirefoxProfile()

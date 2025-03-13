@@ -3,7 +3,7 @@ import re
 import os
 import dotenv
 from discord.ext import commands
-from ProjectFiles.API_Backend import studocu_scraper, quizlet_scraper, brainly_scraper, homework_scraper  # Import Homework scraper
+from ProjectFiles.API_Backend import studocu_scraper, quizlet_scraper, brainly_scraper  # Removed homework_scraper import
 
 # Load environment variables from .env
 dotenv.load_dotenv()
@@ -26,7 +26,6 @@ bot = commands.Bot(command_prefix="!", intents=intents)
 STUDOCU_REGEX = re.compile(r"(https?:\/\/www\.studocu\.com[^\s]*)")
 QUIZLET_REGEX = re.compile(r"(https?:\/\/quizlet\.com[^\s]*)")
 BRAINLY_REGEX = re.compile(r"(https?:\/\/brainly\.[^\s]*)")
-HOMEWORK_REGEX = re.compile(r"(https?:\/\/homework\.study\.com[^\s]*)")  # New Homework.Study.com support
 
 @bot.event
 async def on_ready():
@@ -59,12 +58,6 @@ async def on_message(message):
         brainly_url = BRAINLY_REGEX.search(message.content).group(0)
         await message.channel.send(f"📄 Processing Brainly link: {brainly_url}")
         html_file = brainly_scraper.scrape_brainly(brainly_url)
-
-    # Check if it's a Homework.Study.com link
-    elif HOMEWORK_REGEX.search(message.content):
-        homework_url = HOMEWORK_REGEX.search(message.content).group(0)
-        await message.channel.send(f"📄 Processing Homework.Study.com link: {homework_url}")
-        html_file = homework_scraper.scrape_homework(homework_url)
 
     else:
         return  # No supported links

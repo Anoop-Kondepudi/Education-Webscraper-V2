@@ -2,9 +2,14 @@ import json
 import os
 import cloudscraper
 from bs4 import BeautifulSoup
+import time
+import re
 
 # Path to cookies file
 COOKIES_PATH = os.path.join(os.path.dirname(__file__), "../Cookies/quizlet_cookies.json")
+
+# Path to Downloaded Files folder
+DOWNLOADS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Downloaded Files")
 
 # List of CSS selectors to remove (but NOT blocking JavaScript)
 REMOVE_SELECTORS = [
@@ -95,10 +100,34 @@ def scrape_quizlet(url):
     # Inject JavaScript to remove unwanted elements AFTER page fully loads
     final_html = clean_html(response.text)
 
+    # Create a more descriptive filename based on URL
+    # Extract question ID or set name from URL if possible
+    match = re.search(r'\/([^\/]+?)(?:-[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12})?$', url)
+    if match:
+        file_id = match.group(1)
+    else:
+        file_id = str(int(time.time()))  # Use timestamp as fallback
+    
+    filename = f"quizlet_{file_id}.html"
+    filepath = os.path.join(DOWNLOADS_PATH, filename)
+    
+    # Ensure the Downloads directory exists
+    os.makedirs(DOWNLOADS_PATH, exist_ok=True)
+    
     # Save the formatted HTML
-    filename = "quizlet_page_cleaned.html"
-    with open(filename, "w", encoding="utf-8") as file:
+    with open(filepath, "w", encoding="utf-8") as file:
         file.write(final_html)
 
-    print(f"✅ Cleaned HTML saved as {filename}")
-    return filename
+    print(f"✅ Cleaned HTML saved as {filename} in {DOWNLOADS_PATH}")
+    return filepath
+
+if __name__ == "__main__":
+    # Test URL - you can change this for testing different Quizlet pages
+    test_url = "https://quizlet.com/415105651/practice-lab-3-flash-cards/"
+    print(f"🚀 Testing Quizlet scraper with URL: {test_url}")
+    
+    # Run the scraper
+    output_file = scrape_quizlet(test_url)
+    
+    print(f"\n✅ Quizlet scraping complete!")
+    print(f"✅ Output saved as: {output_file}")

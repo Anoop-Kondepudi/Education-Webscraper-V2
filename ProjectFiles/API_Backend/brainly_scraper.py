@@ -152,5 +152,5 @@ def process_brainly_question(url):
 
 if __name__ == "__main__":
     # Example URL - you can change this or make it accept command line arguments
-    test_url = "https://brainly.com/question/40236528"
+    test_url = "https://brainly.com/question/11514663"
     process_brainly_question(test_url)
