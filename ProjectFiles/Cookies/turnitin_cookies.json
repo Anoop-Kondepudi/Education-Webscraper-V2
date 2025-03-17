@@ -1,0 +1,29 @@
+[
+    {
+        "domain": "scopedlens.com",
+        "expirationDate": 1773634843.879391,
+        "hostOnly": true,
+        "httpOnly": true,
+        "name": "csrftoken",
+        "path": "/",
+        "sameSite": "lax",
+        "secure": true,
+        "session": false,
+        "storeId": "0",
+        "value": "QQokvS1JU6YexOaatgjWoMTjfMzaW55f",
+        "id": 1
+    },
+    {
+        "domain": "scopedlens.com",
+        "hostOnly": true,
+        "httpOnly": true,
+        "name": "sessionid",
+        "path": "/",
+        "sameSite": "lax",
+        "secure": true,
+        "session": true,
+        "storeId": "0",
+        "value": "3zu7ulyz4vty143ylsb9l7ruuj5wvcvf",
+        "id": 2
+    }
+    ]
