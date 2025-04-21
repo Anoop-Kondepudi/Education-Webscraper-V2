@@ -1,7 +1,7 @@
 [
     {
         "domain": ".quizlet.com",
-        "expirationDate": 1741625257.936159,
+        "expirationDate": 1743981632.328485,
         "hostOnly": false,
         "httpOnly": true,
         "name": "__cf_bm",
@@ -10,7 +10,7 @@
         "secure": true,
         "session": false,
         "storeId": "0",
-        "value": "FxNXo3LpEDdXhJQ9giw66Giaoq45mn.i1DZUCJw7HvM-1741623457-1.0.1.1-sg6f927v9Iuy7HwR2UeEU7PKUWwNa8HsA0ZG3M7kQn.3tKAEZSz6OrKAHoNoQ.D0BE90l8vFgZeUfXydt4QdTOC1_s7FvKwyyKS4fa0B.wQ",
+        "value": "1afGDr1HSOZvXT0HBCslC9cNuu8ZDsEVx4jUcNMPS9A-1743979832-1.0.1.1-UhZz72bGoWaO5vH5ST4hjLtSXdrg5WlRkJKxaN5RxfI8ey0pjXg1CR_pZEJUsYnybslzFLiS9zutP.9VFhh1yBT8._kkGjDRm1BqVL3JETM",
         "id": 1
     },
     {
@@ -23,7 +23,7 @@
         "secure": true,
         "session": true,
         "storeId": "0",
-        "value": "jsE0OG.84G4ETAHAnDjKMtdsCGAIZSVp9MCxp0p6vS0-1741623457982-0.0.1.1-604800000",
+        "value": "eevGiKSWm4P7b_jxB5X9YQVW.ZopVJGa94z7VpRAJQU-1743979832400-0.0.1.1-604800000",
         "id": 2
     },
     {
@@ -70,6 +70,20 @@
     },
     {
         "domain": ".quizlet.com",
+        "expirationDate": 1773160840,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "_px3",
+        "path": "/",
+        "sameSite": "lax",
+        "secure": false,
+        "session": false,
+        "storeId": "0",
+        "value": "9d26e0be8a664e81ad47a01169cba6f2ea1fc30b05e0dbd511667af9e4aad52f:I9DG1OfwR6EpR36GqSbpPPbt/PogQ7ll/D4A5bXBjGpufIyCF+xXqW0xzKAVlSd5yKRAxkY8569HOw5kaAa8fw==:1000:QEVmpxg2+n4vnhp2DUIdSas7YGE8zc8HDF2B1/SaPEKU3VFUXnv1lh0izUtxdGmLiO+GeJILb1zUVjjpWb4+lDYppkTZ1aQc2COJzpJm7+jWXBMeJef/7/jm+LGPQTglv3RUd5faLVbZG2gWKtMBBgNx9taIaPzvGKMHjMi7jp+9URXTmviLYgmPmBN9GVcBr8O7leWKeDx8GevnCdmCOfAjHCZQz1s8LMKyJiGBUhM=",
+        "id": 6
+    },
+    {
+        "domain": ".quizlet.com",
         "expirationDate": 1765067508,
         "hostOnly": false,
         "httpOnly": false,
@@ -80,11 +94,11 @@
         "session": false,
         "storeId": "0",
         "value": "9e1e7d65-b432-11ef-bbe7-73f2dc2a26da",
-        "id": 6
+        "id": 7
     },
     {
         "domain": ".quizlet.com",
-        "expirationDate": 1776183539,
+        "expirationDate": 1778539835,
         "hostOnly": false,
         "httpOnly": false,
         "name": "ab.storage.deviceId.6f8c2b67-8bd5-42f6-9c5f-571d9701f693",
@@ -93,12 +107,12 @@
         "secure": false,
         "session": false,
         "storeId": "0",
-        "value": "%7B%22g%22%3A%221b298de1-3a86-2ed9-7e8d-92be3b9c1eff%22%2C%22c%22%3A1695839297783%2C%22l%22%3A1741623539375%7D",
-        "id": 7
+        "value": "%7B%22g%22%3A%221b298de1-3a86-2ed9-7e8d-92be3b9c1eff%22%2C%22c%22%3A1695839297783%2C%22l%22%3A1743979835110%7D",
+        "id": 8
     },
     {
         "domain": ".quizlet.com",
-        "expirationDate": 1776183540,
+        "expirationDate": 1778539835,
         "hostOnly": false,
         "httpOnly": false,
         "name": "ab.storage.sessionId.6f8c2b67-8bd5-42f6-9c5f-571d9701f693",
@@ -107,12 +121,12 @@
         "secure": false,
         "session": false,
         "storeId": "0",
-        "value": "%7B%22g%22%3A%22fc17cb08-6f1e-3488-1c5d-b91e47d61e69%22%2C%22e%22%3A1741625340778%2C%22c%22%3A1741623539374%2C%22l%22%3A1741623540778%7D",
-        "id": 8
+        "value": "%7B%22g%22%3A%2206e4570e-205e-34c4-c47e-71c5b0a1eaa9%22%2C%22e%22%3A1743981635690%2C%22c%22%3A1743979835109%2C%22l%22%3A1743979835690%7D",
+        "id": 9
     },
     {
         "domain": ".quizlet.com",
-        "expirationDate": 1776183539,
+        "expirationDate": 1778539835,
         "hostOnly": false,
         "httpOnly": false,
         "name": "ab.storage.userId.6f8c2b67-8bd5-42f6-9c5f-571d9701f693",
@@ -121,8 +135,8 @@
         "secure": false,
         "session": false,
         "storeId": "0",
-        "value": "%7B%22g%22%3A%22178535731%22%2C%22c%22%3A1741623539373%2C%22l%22%3A1741623539377%7D",
-        "id": 9
+        "value": "%7B%22g%22%3A%22178535731%22%2C%22c%22%3A1741623539373%2C%22l%22%3A1743979835111%7D",
+        "id": 10
     },
     {
         "domain": ".quizlet.com",
@@ -136,7 +150,7 @@
         "session": false,
         "storeId": "0",
         "value": "isGpcEnabled=0&datestamp=Thu+Jun+13+2024+14%3A11%3A59+GMT-0700+(Pacific+Daylight+Time)&version=202310.2.0&browserGpcFlag=0&isIABGlobal=false&hosts=&consentId=7b2f484e-0478-4cc5-b604-de14c54698cc&interactionCount=1&landingPath=https%3A%2F%2Fquizlet.com%2F534472604%2Fsilicon-valley-high-school-spanish-2-part-1-unit-2-flash-cards%2F&GPPCookiesCount=1&groups=C0001%3A1%2CN01%3A1%2CC0002%3A1%2CC0004%3A1",
-        "id": 10
+        "id": 11
     },
     {
         "domain": ".quizlet.com",
@@ -150,11 +164,11 @@
         "session": false,
         "storeId": "0",
         "value": "DBABBg~BUoAAAKA.QA",
-        "id": 11
+        "id": 12
     },
     {
         "domain": ".quizlet.com",
-        "expirationDate": 1776183598.656103,
+        "expirationDate": 1778539836.135269,
         "hostOnly": false,
         "httpOnly": true,
         "name": "qltj",
@@ -164,11 +178,11 @@
         "session": false,
         "storeId": "0",
         "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzM4NCJ9.eyJ2cmYiOjAsInN1YiI6IjE3ODUzNTczMSIsInNpcCI6IjE3My4xNi4xNDkuMTI0IiwiaXNzIjoicXVpemxldC5jb20iLCJlbSI6Implbm50ZWxAaG90bWFpbC5jb20iLCJjdHMiOjE1OTQ2OTU0NjQsImF1ZCI6InYzIiwiYWNjIjoyfQ.qaJPIHm5bk_DwYS2hlyNFEC8D5Y_HCNhOJLJmBcStIS2aAUJeZLxP0UT3vfPwuUz",
-        "id": 12
+        "id": 13
     },
     {
         "domain": ".quizlet.com",
-        "expirationDate": 1773159599.691276,
+        "expirationDate": 1773159599.814478,
         "hostOnly": false,
         "httpOnly": true,
         "name": "sp",
@@ -178,7 +192,7 @@
         "session": false,
         "storeId": "0",
         "value": "a73271cc-1e39-426a-8427-68ffa59f1bee",
-        "id": 13
+        "id": 14
     },
     {
         "domain": "quizlet.com",
@@ -191,11 +205,11 @@
         "session": true,
         "storeId": "0",
         "value": "e5c469c2f571680edc25049bfe44faee97cb1b9fdc79b469ed6e79bb66e9e6d4:9e1e7d65-b432-11ef-bbe7-73f2dc2a26da",
-        "id": 14
+        "id": 15
     },
     {
         "domain": "quizlet.com",
-        "expirationDate": 1776183599.654166,
+        "expirationDate": 1778539835.84361,
         "hostOnly": true,
         "httpOnly": false,
         "name": "_sp_id.424b",
@@ -204,12 +218,12 @@
         "secure": true,
         "session": false,
         "storeId": "0",
-        "value": "04588bd2-8fcf-4d3b-ab79-03d6aeac176b.1695839215.14.1741623600.1739593521.8a6b17c3-60d3-4e5a-ac22-8b03aadfef83.1e82cd87-7168-4a6c-a906-3418c00d6878.c5860002-053d-42e3-8790-700e1b7c024f.1741623460756.16",
-        "id": 15
+        "value": "04588bd2-8fcf-4d3b-ab79-03d6aeac176b.1695839215.17.1743979836.1741873877.7f4754f6-28f7-46f9-b702-59f0dc4518bb.757355e5-a8ce-4c68-a574-9f1cc8729871.183d5219-71b1-41c8-9c31-833a89fa6ba2.1743979834193.3",
+        "id": 16
     },
     {
         "domain": "quizlet.com",
-        "expirationDate": 1741625399,
+        "expirationDate": 1743981635,
         "hostOnly": true,
         "httpOnly": false,
         "name": "_sp_ses.424b",
@@ -219,11 +233,11 @@
         "session": false,
         "storeId": "0",
         "value": "*",
-        "id": 16
+        "id": 17
     },
     {
         "domain": "quizlet.com",
-        "expirationDate": 1741625399,
+        "expirationDate": 1743981636,
         "hostOnly": true,
         "httpOnly": false,
         "name": "app_session_id",
@@ -232,12 +246,12 @@
         "secure": true,
         "session": false,
         "storeId": "0",
-        "value": "d52d23bb-08da-463a-8f92-c1ea6aa761da",
-        "id": 17
+        "value": "9c5d5a6e-b4da-4eaa-843e-66a50d5fe9f6",
+        "id": 18
     },
     {
         "domain": "quizlet.com",
-        "expirationDate": 1741709939.527729,
+        "expirationDate": 1744066236.135151,
         "hostOnly": true,
         "httpOnly": true,
         "name": "days_since_last_visit",
@@ -246,21 +260,7 @@
         "secure": true,
         "session": false,
         "storeId": "0",
-        "value": "1",
-        "id": 18
-    },
-    {
-        "domain": "quizlet.com",
-        "expirationDate": 1741624131.326268,
-        "hostOnly": true,
-        "httpOnly": false,
-        "name": "disable-google-one-tap",
-        "path": "/",
-        "sameSite": "unspecified",
-        "secure": true,
-        "session": false,
-        "storeId": "0",
-        "value": "1",
+        "value": "14",
         "id": 19
     },
     {
@@ -279,7 +279,7 @@
     },
     {
         "domain": "quizlet.com",
-        "expirationDate": 1741709924,
+        "expirationDate": 1744066234,
         "hostOnly": true,
         "httpOnly": false,
         "name": "has_seen_logged_in_home_page_timestamp",
@@ -288,7 +288,7 @@
         "secure": true,
         "session": false,
         "storeId": "0",
-        "value": "1741623524984",
+        "value": "1743979834705",
         "id": 21
     },
     {
@@ -321,7 +321,7 @@
     },
     {
         "domain": "quizlet.com",
-        "expirationDate": 1776183598.655624,
+        "expirationDate": 1778539836.135079,
         "hostOnly": true,
         "httpOnly": true,
         "name": "qlts",
@@ -343,7 +343,7 @@
         "secure": true,
         "session": true,
         "storeId": "0",
-        "value": "5b9sPjaRgPmx9qtxNnC424",
+        "value": "udCtGA8csTQkPKqkTEr8vN",
         "id": 25
     },
     {

@@ -1,0 +1,10 @@
+22:59:29: Opened URL: https://www.coursehero.com/tutors-problems/Physics/60895488-A-20-kg-kangaroo-is-bouncing-as-kangaroos-are-wont-to-do-During-a/?justUnlocked=1
+22:59:29: Waiting for the main container...
+22:59:59: Error: Message: 
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:197:5
+NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:527:5
+dom.find/</<@chrome://remote/content/shared/DOM.sys.mjs:136:16
+
+23:00:00: Browser closed

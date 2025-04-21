@@ -9,10 +9,10 @@ import time
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Proxy Configuration
-PROXY_HOST = "12.176.171.19"
-PROXY_PORT = "8080"
-PROXY_USER = "wr37kDWXUGoa"
-PROXY_PASS = "USMuWej9iXz8"
+PROXY_HOST = "144.229.117.13"
+PROXY_PORT = "1337"
+PROXY_USER = "lho7SIZFaRh9"
+PROXY_PASS = "1inYc0RRMvYs"
 
 # Chrome 120 Browser Headers (in correct order)
 ORDERED_HEADERS = OrderedDict([
@@ -38,7 +38,7 @@ def get_random_hardware_concurrency():
 
 def solve_recaptcha():
     try:
-        capsolver.api_key = "CAP-93BF0B9A68800E2D4F3CF7B585853A90"
+        capsolver.api_key = "CAP-BF3A913B93C1406DB8D4772118D2E44694DF0EB9DD657FF38C5A5C30712159C7"
         solution = capsolver.solve({
             "type": "ReCaptchaV2EnterpriseTaskProxyLess",
             "websiteURL": "https://www.coursehero.com",
@@ -46,6 +46,7 @@ def solve_recaptcha():
             "apiDomain": "www.recaptcha.net",
             "pageAction": "login"
         })
+
         return solution['gRecaptchaResponse']
     except Exception as e:
         print(f"Error solving captcha: {e}")
@@ -111,6 +112,59 @@ def login_to_coursehero():
     except Exception as e:
         return False, f"Initial page load failed: {e}"
 
+    # Get Reese84 token
+    print(f"[{datetime.now()}] Getting Reese84 token...")
+    try:
+        # Read post data from file
+        with open('postdata.txt') as f:
+            post_data = f.read()
+        
+        # Make request to get Reese84 token
+        response = session.post(
+            'https://www.coursehero.com/Ifainesse-What-mine-Alasterd-the-How-I-haile-Lad?d=www.coursehero.com',
+            headers=headers,
+            data=post_data,
+            proxies=proxies,
+            verify=False
+        )
+        
+        response_json = response.json()
+        reese84_token = response_json["token"]
+        
+        print(f"Reese84 token: {reese84_token}")
+        print(f"Response JSON: {response_json}")
+        
+        # Set the token as a cookie
+        session.cookies.set("reese84", reese84_token, domain='www.coursehero.com', path='/', secure=True)
+        
+        # Update headers for subsequent requests - storing these for later use
+        reese84_headers = {
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Cache-Control': 'no-cache',
+            'Dnt': '1',
+            'Referer': 'https://www.coursehero.com/',
+            'sec-ch-ua': '"Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"',
+            'sec-ch-ua-mobile': '?0',
+            'sec-ch-ua-platform': '"Windows"',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'same-origin',
+            'User-Agent': ORDERED_HEADERS['user-agent']
+        }
+        
+        # Visit login page with updated headers
+        response = session.get(
+            'https://www.coursehero.com/login/?login_user_type=&ref=login',
+            headers=reese84_headers,
+            proxies=proxies,
+            verify=False
+        )
+        print(f"Login page response with Reese84 token: {response}")
+        
+    except Exception as e:
+        return False, f"Failed to get Reese84 token: {e}"
+
     # Solve reCAPTCHA
     print(f"[{datetime.now()}] Solving reCAPTCHA...")
     recaptcha_token = solve_recaptcha()
@@ -119,8 +173,8 @@ def login_to_coursehero():
     
     time.sleep(2)  # Add delay after captcha
 
-    # Login request with enhanced headers
-    login_headers = dict(ORDERED_HEADERS)
+    # Use the same headers from Reese84 token request for consistency
+    login_headers = reese84_headers.copy()
     login_headers.update({
         'origin': 'https://www.coursehero.com',
         'referer': 'https://www.coursehero.com/login/',
@@ -128,38 +182,27 @@ def login_to_coursehero():
         'sec-fetch-site': 'same-origin',
         'sec-fetch-mode': 'cors',
         'sec-fetch-dest': 'empty',
-        'x-requested-with': 'XMLHttpRequest',
-        # Add more browser-like headers
-        'connection': 'keep-alive',
-        'pragma': 'no-cache',
-        'cache-control': 'no-cache',
-        'te': 'trailers'
+        'x-requested-with': 'XMLHttpRequest'
     })
 
-    # Add fingerprint data with more realistic values
-    login_headers['x-ch-device-memory'] = str(fingerprint['deviceMemory'])
-    login_headers['x-ch-hardware-concurrency'] = str(fingerprint['hardwareConcurrency'])
-    login_headers['x-ch-viewport-width'] = str(1920)
-    login_headers['x-ch-viewport-height'] = str(1080)
-    login_headers['x-ch-screen-width'] = str(1920)
-    login_headers['x-ch-screen-height'] = str(1080)
-    login_headers['x-ch-has-touch'] = 'false'
-    login_headers['x-ch-platform'] = fingerprint['platform']
-    login_headers['x-ch-app-version'] = '1.0.0'
+    # No need to add fingerprint data since we're maintaining the security context
+    # from the successful Reese84 token request
 
     login_data = {
-        'email': 'hyperpeekvalorant@gmail.com',
-        'password': 'Anoop*123',
+        'email': 'pzkudvqxdt@ibolinva.com',
+        'password': 'pzkudvqxdt@ibolinva.com',
         'submit': 'true',
         'remember_me': '1',
         'g-recaptcha-response': recaptcha_token,
-        # Add additional parameters that might be expected
         'login_type': 'Email',
         'device_type': 'desktop'
     }
     
     print(f"[{datetime.now()}] Attempting login...")
     try:
+        # Add a short delay before login attempt
+        time.sleep(1)
+        
         response = session.post(
             'https://www.coursehero.com/ajax/login.php',
             headers=login_headers,
@@ -193,4 +236,4 @@ def main():
         print(f"[{datetime.now()}] Login failed: {result}")
 
 if __name__ == "__main__":
-    main() 
+    main()

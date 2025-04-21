@@ -1,0 +1,1181 @@
+[
+  {
+    "protocols": [
+      "wamp.2.json",
+      "wamp.2.msgpack"
+    ],
+    "time": 1742097454211,
+    "type": "websocket_connection",
+    "url": "wss://wss.coursehero.com/"
+  },
+  {
+    "endTime": 1742097454512,
+    "id": "17420974541258urb80mkx96",
+    "method": "GET",
+    "requestData": null,
+    "responsePreview": "{\"sig\":\"_CgJqMRAUGHwiBggBEOatASiD5_OoCjCumNm-BjiumNm-BkCsi7XeBEoUCAEQ3wEYl2ggiICAwAQoq4CAoARQAFoKCAAQABgAIAAoAGABahNidXR0b24zLmlhZC5odi5wcm9kggEUCAEQ3wEYozogiICAwAQoq4CAoASIAZi2pnSQAQCYAQA\",\"txnId\":27...",
+    "responseSize": 3244,
+    "startTime": 1742097454126,
+    "status": 200,
+    "url": "https://i2-mqlazzwrbemhoxrsvfujqzttswyjya.init.cedexis-radar.net/i2/1/22246/j1/20/124/1742097454/0/0/providers.json?imagesok=1&n=1&p=1&r=1&s=1&t=1"
+  },
+  {
+    "data": "[1,\"realm1\",{\"roles\":{\"caller\":{\"features\":{\"caller_identification\":true,\"call_canceling\":true,\"progressive_call_results\":true}},\"callee\":{\"features\":{\"caller_identification\":true,\"pattern_based_registration\":true,\"shared_registration\":true,\"progressive_call_results\":true,\"registration_revocation\":true}},\"publisher\":{\"features\":{\"publisher_identification\":true,\"subscriber_blackwhite_listing\":true,\"publisher_exclusion\":true}},\"subscriber\":{\"features\":{\"publisher_identification\":true,\"pattern_based_subscription\":true,\"subscription_revocation\":true}}},\"authmethods\":[\"ticket\"]}]",
+    "direction": "outgoing",
+    "time": 1742097454595,
+    "type": "websocket_message",
+    "url": "wss://wss.coursehero.com/"
+  },
+  {
+    "endTime": 1742097454647,
+    "id": "1742097454508sqvee5bkoyc",
+    "method": "POST",
+    "requestData": null,
+    "responsePreview": "{\"stn\":1,\"err\":1,\"ins\":1,\"spa\":1,\"sr\":0,\"srs\":0,\"st\":1,\"sts\":0,\"log\":0,\"app\":{\"agents\":[{\"entityGuid\":\"Njk1MDM4fEJST1dTRVJ8QVBQTElDQVRJT058MTUxMzc1NzY2\"}],\"nrServerTime\":1742097454722}}...",
+    "responseSize": 185,
+    "startTime": 1742097454508,
+    "status": 200,
+    "url": "https://bam.nr-data.net/1/NRBR-0fc29957056d2f116c8?a=136461810,1502219757&v=1.284.1&to=NVFbZUFUC0RTAEcLXQwbekRAQQpaHQBcF0ARUVFUQVo6W1MaXBdGPVhYSFxAEWhaBlIG&rst=6177&ck=0&s=3380ba23ed7d216e&ref=https://www.coursehero.com/tutors-problems/Physics/60895488-A-20-kg-kangaroo-is-bouncing-as-kangaroos-are-wont-to-do-During-a/&ptid=56b8866e1be6b208&af=err,xhr,stn,ins&ap=39&be=4083&fe=1570&dc=1015&at=GRZMEwlOGBsQAhFYSR9J&fsh=0&perf=%7B%22timing%22:%7B%22of%22:1742097448330,%22n%22:0,%22dn%22:36,%22dne%22:36,%22c%22:36,%22s%22:69,%22ce%22:118,%22rq%22:157,%22rp%22:4083,%22rpe%22:4083,%22di%22:4326,%22ds%22:5092,%22de%22:5098,%22dc%22:5645,%22l%22:5645,%22le%22:5653%7D,%22navigation%22:%7B%7D%7D&fcp=4305&timestamp=1742097454664"
+  },
+  {
+    "data": "[4,\"ticket\",{}]",
+    "direction": "incoming",
+    "time": 1742097454667,
+    "type": "websocket_message",
+    "url": "wss://wss.coursehero.com/"
+  },
+  {
+    "data": "[5,\"ca5c2bb614865c34ca163243480d8057\",{}]",
+    "direction": "outgoing",
+    "time": 1742097454667,
+    "type": "websocket_message",
+    "url": "wss://wss.coursehero.com/"
+  },
+  {
+    "data": "[2,5322841125217917,{\"x_cb_node\":\"websockets-7cd8f995c9-mb6tk-1\",\"x_cb_worker\":\"worker001\",\"x_cb_peer\":\"tcp4:127.0.0.6:43923\",\"x_cb_pid\":47,\"realm\":\"realm1\",\"authid\":\"100000896884788\",\"authrole\":\"frontend\",\"authmethod\":\"ticket\",\"authprovider\":\"dynamic\",\"authextra\":{\"x_cb_node\":\"websockets-7cd8f995c9-mb6tk-1\",\"x_cb_worker\":\"worker001\",\"x_cb_peer\":\"tcp4:127.0.0.6:43923\",\"x_cb_pid\":47},\"roles\":{\"broker\":{\"features\":{\"publisher_identification\":true,\"pattern_based_subscription\":true,\"session_meta_api\":true,\"subscription_meta_api\":true,\"subscriber_blackwhite_listing\":true,\"publisher_exclusion\":true,\"subscription_revocation\":true,\"payload_transparency\":true,\"payload_encryption_cryptobox\":true,\"event_retention\":true}},\"dealer\":{\"features\":{\"caller_identification\":true,\"pattern_based_registration\":true,\"session_meta_api\":true,\"registration_meta_api\":true,\"shared_registration\":true,\"call_canceling\":true,\"progressive_call_results\":true,\"registration_revocation\":true,\"payload_transparency\":true,\"testament_meta_api\":true,\"payload_encryption_cryptobox\":true}}}}]",
+    "direction": "incoming",
+    "time": 1742097454746,
+    "type": "websocket_message",
+    "url": "wss://wss.coursehero.com/"
+  },
+  {
+    "data": "[32,1,{},\"v1.notification_bell.100000896884788.owner\"]",
+    "direction": "outgoing",
+    "time": 1742097454747,
+    "type": "websocket_message",
+    "url": "wss://wss.coursehero.com/"
+  },
+  {
+    "data": "[33,1,3134848433854271]",
+    "direction": "incoming",
+    "time": 1742097454834,
+    "type": "websocket_message",
+    "url": "wss://wss.coursehero.com/"
+  },
+  {
+    "content": "T",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455037,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455048,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455057,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To d",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455068,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To de",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455077,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To det",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455089,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To dete",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455099,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To deter",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455110,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determ",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455122,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determi",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455134,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determin",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455142,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455153,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455164,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine t",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455175,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine th",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455185,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455194,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455206,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the k",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455216,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the ka",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455226,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kan",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455237,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kang",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455247,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kanga",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455258,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangar",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455268,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaro",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455279,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455289,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo'",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455301,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455310,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455321,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's k",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455333,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's ki",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455342,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kin",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455352,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kine",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455363,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinet",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455373,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kineti",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455385,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455394,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455404,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic e",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455416,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic en",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455425,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic ene",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455436,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic ener",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455447,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energ",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455457,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455471,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455477,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy a",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455487,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455498,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455507,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at t",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455518,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at th",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455529,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455539,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455550,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the l",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455560,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lo",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455570,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the low",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455580,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowe",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455590,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowes",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455602,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455612,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455622,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest p",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455633,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest po",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455643,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest poi",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455653,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest poin",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455663,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455674,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455685,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point w",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455696,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point wi",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455706,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point wit",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455717,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point with",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455729,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point withi",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455740,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455752,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455761,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within t",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455771,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within th",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455782,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455792,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455802,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the g",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455812,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the gi",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455823,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the giv",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455834,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the give",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455845,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455854,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455865,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given i",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455875,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given in",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455887,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given int",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455898,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given inte",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455909,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given inter",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455920,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interv",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455932,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interva",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455941,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455951,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval,",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455964,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval,",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455973,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, w",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455985,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097455996,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456007,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we n",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456018,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we ne",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456028,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we nee",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456039,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456050,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456060,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need t",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456070,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456082,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456092,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to u",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456105,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to un",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456114,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to und",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456125,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to unde",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456136,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to under",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456146,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to unders",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456157,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to underst",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456169,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understa",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456178,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understan",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456188,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456199,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456209,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand t",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456219,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand th",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456230,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456241,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456253,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the c",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456262,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the co",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456271,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the con",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456282,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the cont",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456292,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the conte",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456302,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the contex",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456314,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456325,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456335,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context o",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456346,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456357,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456371,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of t",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456379,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of th",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456391,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456401,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456412,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the p",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456422,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the pr",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456432,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the pro",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456442,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the prob",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456453,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the probl",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456468,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the proble",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456476,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456484,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem.",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456496,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem.",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456506,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. T",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456518,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. Th",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456527,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456537,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456548,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The p",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456559,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The pr",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456569,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The pro",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456580,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The prob",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456591,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The probl",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456602,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The proble",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456613,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The problem",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456623,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The problem",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456635,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The problem s",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456643,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The problem st",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456654,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The problem sta",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456664,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The problem stat",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456675,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The problem state",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456685,
+    "type": "dom_mutation"
+  },
+  {
+    "content": "To determine the kangaroo's kinetic energy at the lowest point within the given interval, we need to understand the context of the problem. The problem states",
+    "element": "P",
+    "path": "html > body > div#block_ssi:component:SsiQuestionLanding > div.tw-relative.tw-bg-gray-20 > div.lg:tw-px-20.tw-mx-auto.tw-px-8.tw-pb-8.md:tw-px-16.md:tw-pb-16.tw-max-w-[1440px] > div.tw-grid.tw-grid-cols-1.md:tw-grid-cols-[auto_minmax(10px,1fr)].md:tw-gap-x-20 > main.tw-w-full.tw-overflow-hidden > div.tw-flex.tw-w-full > div.qna-section.tw-w-full.tw-max-w-full > div.tw-my-12 > div.tw-space-y-12 > div.tw-p-12.lg:tw-p-20.tw-rounded-lg.tw-bg-white.tw-relative > div.tw-min-h-[16rem] > article.tw-whitespace-pre-line > p.tw-m-0",
+    "time": 1742097456698,
+    "type": "dom_mutation"
+  }
+]

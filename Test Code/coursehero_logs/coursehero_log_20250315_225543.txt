@@ -1,0 +1,159 @@
+22:55:43: Starting CourseHero monitoring with Firefox profile: /Users/anoopkondepudi/Library/Application Support/Firefox/Profiles/43gkv1wz.coursehero
+22:55:48: Opened URL: https://www.coursehero.com/tutors-problems/Physics/60895488-A-20-kg-kangaroo-is-bouncing-as-kangaroos-are-wont-to-do-During-a/?justUnlocked=1
+22:55:48: Waiting for the main container...
+22:55:58: Main container found!
+22:55:58: Found 90 script elements on the page
+22:55:58: Script 1: External source: https://www.gstatic.com/recaptcha/releases/J79K9xgfxwT6Syzx-UyWdD89/recaptcha__en.js
+22:55:58: Script 2: External source: https://assets.coursehero.com/lib/ilink.min.js
+22:55:58: Script 3: External source: https://www.googletagmanager.com/gtm.js?id=GTM-DK9F
+22:55:58: Script 4: External source: https://connect.facebook.net/en_US/sdk.js?hash=b43da751a34d3a4c5c0593d042bdbd48
+22:55:58: Script 5: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/mt_captcha/interceptor.js
+22:55:58: Script 6: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/turnstile/interceptor.js
+22:55:58: Script 7: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/turnstile/hunter.js
+22:55:58: Script 8: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/amazon_waf/interceptor.js
+22:55:58: Script 9: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/yandex/interceptor.js
+22:55:58: Script 10: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/lemin/interceptor.js
+22:55:58: Script 11: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/arkoselabs/hunter.js
+22:55:58: Script 12: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/arkoselabs/interceptor.js
+22:55:58: Script 13: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/recaptcha/interceptor.js
+22:55:58: Script 14: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/recaptcha/hunter.js
+22:55:58: Script 15: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/keycaptcha/hunter.js
+22:55:58: Script 16: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/hcaptcha/hunter.js
+22:55:58: Script 17: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/hcaptcha/interceptor.js
+22:55:58: Script 18: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/geetest_v4/interceptor.js
+22:55:58: Script 19: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/captcha/geetest/interceptor.js
+22:55:58: Script 20: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/communication_helpers.js
+22:55:58: Script 21: External source: moz-extension://a9b01066-8e64-40e9-bce9-b9a75f70dab7/content/core_helpers.js
+22:55:58: Script 22: External source: https://connect.facebook.net/en_US/sdk.js
+22:55:58: Script 23: Inline script preview: 
+    // Define dataLayer and the gtag function.
+    window.dataLayer = window.dataLayer || [];
+    f...
+22:55:58: Script 24: Inline script preview: (window.NREUM||(NREUM={})).init={privacy:{cookies_enabled:true},ajax:{deny_list:[]}};(window.NREUM||...
+22:55:58: Script 25: External source: https://cdn.cookielaw.org/consent/020007b9-7f08-4600-aa15-099b43fd900b/OtAutoBlock.js
+22:55:58: Script 26: External source: https://cdn.cookielaw.org/scripttemplates/otSDKStub.js
+22:55:58: Script 27: External source: https://cdn.cookielaw.org/opt-out/otCCPAiab.js
+22:55:58: Script 28: Inline script preview: 
+
+      // If no aaq widget, adjust the bottom position of the floating icon
+      document.addEvent...
+22:55:58: Script 29: Inline script preview: 
+	// NREUM is only defined in production. For other environments,
+	// set a shim so that usages of N...
+22:55:58: Script 30: Inline script preview: 
+                const dataLayer = window.dataLayer || []
+                dataLayer.push({
+         ...
+22:55:58: Script 31: Inline script preview: 
+    window.__CH_DIMENSIONS = {
+        'dimension2': "basic",
+        'dimension3': "false",
+      ...
+22:55:58: Script 32: External source: https://www.googletagmanager.com/gtag/js?id=G-HR7CRKGJMD
+22:55:58: Script 33: Inline script preview: 
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    ...
+22:55:58: Script 34: Inline script preview: 
+
+    window.__CH_WEBSERVER_NAME = 'da5e92347bf3';
+	window.__CH_CF_RAY = '921151484c221461-SJC';
+	wi...
+22:55:58: Script 35: Inline script preview: 
+    function onPageLoadComplete(e){"complete"===document.readyState?e():document.addEventListener("...
+22:55:58: Script 36: External source: https://js.appboycdn.com/web-sdk/5.3/braze.min.js
+22:55:58: Script 37: Inline script preview: 
+        window.__CH_EXTERNAL_ID = '64e7f40d-877c-4434-af3b-fdb3bc91d4c6';
+
+        if (window.__CH_...
+22:55:58: Script 38: Inline script preview: (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});...
+22:55:58: Script 39: Inline script preview: 
+	try{
+					} catch (error){
+		if (typeof(console) !== 'undefined') {
+			console.error("[GTM-EVENT] ...
+22:55:58: Script 40: Inline script preview: 
+    var _sift = window._sift = window._sift || [];
+    _sift.push(['_setAccount', '84e77b3dea']);
+ ...
+22:55:58: Script 41: Inline script preview: 
+	var _ilinkconfig = {pixel: 'https://www.coursehero.com/ilink/assets/l.gif'};
+	(function (window, d...
+22:55:58: Script 42: Inline script preview: 
+        {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+        ...
+22:55:58: Script 43: Inline script preview: 
+      // We want to copy over some overrides from other places in the code.
+    // For eg: Mobile R...
+22:55:58: Script 44: External source: https://assets.coursehero.com/assets/legacy/assetic:ch-editor-tm.d47aab86.js
+22:55:58: Script 45: External source: https://assets.coursehero.com/assets/legacy/layout-bundle:common:foot:modularBeef.c3550fd2.js
+22:55:58: Script 46: External source: https://www.coursehero.com/assets/js/compiled/vendors~qa/ask-expert-tutors/app.a74808e2514cf092b85d.js
+22:55:58: Script 47: External source: https://www.coursehero.com/assets/js/compiled/qa/ask-expert-tutors/app.a74808e2514cf092b85d.js
+22:55:58: Script 48: Inline script preview: 
+    window.googleClientId = "144313771453-he2d4oqgpk19qheu78sgb8jkf48uetq9.apps.googleusercontent.c...
+22:55:58: Script 49: External source: https://assets.coursehero.com/assets/legacy/layout-bundle:foot.eea317d8.js
+22:55:58: Script 50: External source: https://assets.coursehero.com/assets/react/react.18.2.0.production.min.js
+22:55:58: Script 51: External source: https://assets.coursehero.com/assets/react/react-dom.18.2.0.production.min.js
+22:55:58: Script 52: Inline script preview: 
+        CHAnalytics.init({
+        env: 'prod',
+        random_bytes: [168,28,34,243,214,131,94,234...
+22:55:58: Script 53: External source: https://assets.coursehero.com/assets/legacy/layout-bundle:masterUnoptimized:autobahn.d21855b3.js
+22:55:58: Script 54: External source: https://cdnjs.cloudflare.com/polyfill/v3/polyfill.js?version=4.8.0&flags=gated&features=default%2CArray.prototype.includes%2CArray.prototype.find%2CArray.prototype.findIndex%2Cfetch%2CObject.assign%2CObject.entries%2CObject.fromEntries%2CObject.values%2CNodeList.prototype.forEach%2CIntersectionObserver%2CIntersectionObserverEntry%2CAbortController%2CglobalThis
+22:55:58: Script 55: External source: https://assets.coursehero.com/assets/legacy/layout-bundle:common:foot:excludeLegacy.a16b3259.js
+22:55:58: Script 56: Inline script preview: 
+    var appId = 126130834105126;
+
+    onPageLoadComplete(function() {
+        if (window.amplitudeS...
+22:55:58: Script 57: External source: https://assets.coursehero.com/lib/valtio.min.js
+22:55:58: Script 58: Inline script preview: 
+    window.addEventListener("load", function() {
+        document.querySelectorAll('link[media=none...
+22:55:58: Script 59: Inline script preview: 
+            window['_ch_websocketUrl'] = 'wss://wss.coursehero.com/'
+        ......
+22:55:58: Script 60: External source: https://assets.coursehero.com/lib/websockets.js
+22:55:58: Script 61: Inline script preview: 
+    CHAnalytics.v("initial").pageView()
+......
+22:55:58: Script 62: Inline script preview: window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRBR-0fc29957056d2f116...
+22:55:58: Script 63: Inline script preview: window['_props_ssi-global_FooterFragment'] = {"hideFooterLinks":false,"useBrandRefreshStyles":false,...
+22:55:58: Script 64: Inline script preview: window['_props_ssi-global_HeaderFragment'] = {"useUTSViewer":true,"isMobile":false,"isMedium":false,...
+22:55:58: Script 65: External source: https://assets.coursehero.com/ssi/locales/SsiQuestionLanding/en-1741888137497.js
+22:55:58: Script 66: Inline script preview: window['_props_SsiQuestionLanding'] = {"JTJGdHV0b3JzLXByb2JsZW1zJTJGUGh5c2ljcyUyRjYwODk1NDg4LUEtMjAt...
+22:55:58: Script 67: Inline script preview: [308,357,824]......
+22:55:58: Script 68: Inline script preview: {"namedChunks":["src-public-tutors-problems-categoryName-questionSlug"]}......
+22:55:58: Script 69: External source: https://assets.coursehero.com/ssi/runtime.5ec13800195452d508da.bundle.js
+22:55:58: Script 70: External source: https://assets.coursehero.com/ssi/28.8b8970ccb6faec10cd36.bundle.js
+22:55:58: Script 71: External source: https://assets.coursehero.com/ssi/SsiQuestionLanding.988c1e249ded917335e3.bundle.js
+22:55:58: Script 72: External source: https://assets.coursehero.com/ssi/308.fdc7f1c902aa0ff00f83.js
+22:55:58: Script 73: External source: https://assets.coursehero.com/ssi/357.8c94b57dcc30bfd70fd2.js
+22:55:58: Script 74: External source: https://assets.coursehero.com/ssi/src-public-tutors-problems-categoryName-questionSlug.1deb4be510b558344f3a.js
+22:55:58: Script 75: Inline script preview: window['__props_user'] = {"auth":{"sessionId":"02f8d1d6-3fd3-451b-9119-15cfc68be2f1","userId":100000...
+22:55:58: Script 76: Inline script preview: [542,257,543,344,263]......
+22:55:58: Script 77: Inline script preview: {"namedChunks":["header-components-notification-bell","header-components-study-space-upload-modal-st...
+22:55:58: Script 78: External source: https://assets.coursehero.com/ssi/ssiGlobalRuntime.dd345fd3a19b7c63027d.bundle.js
+22:55:58: Script 79: External source: https://assets.coursehero.com/ssi/common.aa50cf5cab65c49b9b1b.bundle.js
+22:55:58: Script 80: External source: https://assets.coursehero.com/ssi/747.ac89ab30840613d50a72.bundle.js
+22:55:58: Script 81: External source: https://assets.coursehero.com/ssi/ssiglobalHeaderFragment.76cc6db4e4eb8952eb0e.bundle.js
+22:55:58: Script 82: External source: https://assets.coursehero.com/ssi/542.fe0a81a1da98ba819cfa.js
+22:55:58: Script 83: External source: https://assets.coursehero.com/ssi/257.19d2365eb4e18ade7675.js
+22:55:58: Script 84: External source: https://assets.coursehero.com/ssi/header-components-notification-bell.6d21c2aec0a5d4d4ceb1.js
+22:55:58: Script 85: External source: https://assets.coursehero.com/ssi/344.cfd4b600a750aba0123b.js
+22:55:58: Script 86: External source: https://assets.coursehero.com/ssi/header-components-study-space-upload-modal-study-space-upload-modal.3ddb35a939cef422c64a.js
+22:55:58: Script 87: External source: https://www.recaptcha.net/recaptcha/enterprise.js
+22:55:58: Script 88: External source: https://apis.google.com/js/platform.js
+22:55:58: Script 89: External source: https://connect.facebook.net/en_US/sdk.js
+22:55:58: Script 90: External source: https://connect.facebook.net/en_US/sdk.js
+22:55:58: Monitoring attempt 1/30...
+22:55:59: Article found!
+22:55:59: Article HTML: <article class="tw-whitespace-pre-line" data-testid="ai-message"></article>...
+22:55:59: No paragraphs found in article. Checking for other content:
+22:55:59: Article text content: 
+22:55:59: Error during monitoring: object of type 'NoneType' has no len()
+22:56:01: Error: object of type 'NoneType' has no len()
+22:56:01: Browser closed

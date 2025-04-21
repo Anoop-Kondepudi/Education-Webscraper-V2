@@ -1,0 +1,19 @@
+# Core web scraping
+selenium==4.15.2
+webdriver-manager==4.0.1
+beautifulsoup4==4.12.2
+requests==2.31.0
+
+# Advanced scraping and anti-bot bypassing
+cloudscraper==1.2.71
+tls-client==0.2.2
+capsolver==1.0.6
+#capsolver-extension-python==0.0.3
+urllib3==2.0.7
+
+# Discord bot
+discord.py==2.3.2
+python-dotenv==1.0.0
+
+# Environment and utility
+#lxml==4.9.3

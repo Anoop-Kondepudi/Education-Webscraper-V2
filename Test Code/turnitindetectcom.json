@@ -1,0 +1,11 @@
+{
+    "cookies": [],
+    "localStorage": {
+        "_grecaptcha": "09ALcxeyqSJKRrCrPc8ML-rsyHwWxou5ufEcmc9qmg0pR7KbMCLKQqHI3cU7txQVyC3-l-LGdPS4x0_uKRAdxvWvxgiDqU-qgGNL8SHUM5pZFpJqRAsvO-M9j_FEtC3n3w",
+        "darkMode": "true"
+    },
+    "sessionStorage": {
+        "tfa": "true"
+    },
+    "jwt_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTY5MThmZWUtOWQ0NC00NGE2LTlkM2QtZGViOTUyOGUxODdjIiwiZXhwIjoxNzQyMjM5NTEyfQ.a2icuz4Tbzq-gGlL70Cw9EK-KtIgiuDikQ10qpCtJlY"
+}

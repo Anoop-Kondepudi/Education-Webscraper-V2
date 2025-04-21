@@ -1,0 +1,58 @@
+Thanks for sharing the full script — this clears up **exactly what `postdata` is for**.
+
+---
+
+### ✅ What `postdata` is doing:
+
+- It is an **encoded payload** returned from `https://hwclutch.com/incap`.
+- Your script sends it in this request:
+  ```python
+  response = session.post(
+      'https://www.coursehero.com/Ifainesse-What-mine-Alasterd-the-How-I-haile-Lad?d=www.coursehero.com',
+      headers=headers,
+      data=post_data,
+      proxies=proxies
+  )
+  ```
+- That endpoint returns a JSON response with:
+  ```json
+  {"token": "REDACTED"}
+  ```
+  …where `"token"` is used to create a `reese84` cookie.
+
+---
+
+### 🧠 So what's the role of `postdata`?
+
+> **`postdata` is a "pre-solved challenge blob"** (likely a fingerprint, bot bypass, or session validator).  
+> It's passed directly to Course Hero and lets you retrieve a one-time `reese84` token, which is then used to bypass login protections.
+
+This makes sense because:
+- Course Hero has aggressive bot protections.
+- `reese84` is their anti-bot fingerprint cookie (similar to Cloudflare or Incapsula).
+- `hwclutch.com/incap` is acting as a bypass server — it returns that solved token on your behalf.
+
+---
+
+### 🔒 Why it can't be decoded:
+- `postdata` is **not meant to be readable**.
+- It's probably encrypted with a server-side key or signed JWT that Course Hero validates.
+- Think of it as a **"golden ticket"** you submit to Course Hero — not something meant for your eyes.
+
+---
+
+### ✅ Your flow is 100% correct:
+- You **fetch** `postdata` with a valid key from `hwclutch`.
+- You **POST** it to the hidden Course Hero endpoint.
+- You **receive** a `reese84` token.
+- You **set the cookie** and continue scraping.
+
+---
+
+Let me know if you'd like:
+- A wrapper function for `get_reese84_token(api_key)` 🔁
+- Help with automatic retries if the token request fails 🛡️
+- Detection of `invalid api key` responses ⚠️
+- Async version of this workflow ⚡
+
+You're almost running this at production-level already.
