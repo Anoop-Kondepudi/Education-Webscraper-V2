@@ -1,6 +1,7 @@
 import time
 import os
 import glob
+import atexit
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
@@ -11,8 +12,27 @@ FIREFOX_PROFILE_PATH = "/Users/anoopkondepudi/Library/Application Support/Firefo
 # Correct path to Downloaded Files folder
 DOWNLOADS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Downloaded Files")
 
+# Keep track of active browser instances
+active_driver = None
+
+def close_active_driver():
+    """Close any active driver when the module exits"""
+    global active_driver
+    if active_driver:
+        try:
+            active_driver.quit()
+            print("✅ Cleaned up expert browser instance on exit")
+        except Exception as e:
+            print(f"Warning: Error closing browser: {e}")
+        active_driver = None
+
+# Register the cleanup function
+atexit.register(close_active_driver)
+
 def setup_driver():
     """Set up and return Firefox WebDriver."""
+    global active_driver
+    
     options = webdriver.FirefoxOptions()
     options.headless = True  # Run in headless mode
     options.add_argument("--headless")
@@ -41,8 +61,8 @@ def setup_driver():
     options.set_preference("browser.download.always_ask_before_handling_new_types", False)
     options.set_preference("browser.download.manager.quitBehavior", 2)
     
-    driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
-    return driver
+    active_driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
+    return active_driver
 
 def check_download_success(driver, timeout=30):
     """Check if download was successful by monitoring the Downloads folder."""
@@ -73,6 +93,7 @@ def check_download_success(driver, timeout=30):
 
 def scrape_brainly(url):
     """Main scraping function - simply open URL and wait for download."""
+    global active_driver
     driver = setup_driver()
     download_success = False
     
@@ -90,12 +111,18 @@ def scrape_brainly(url):
             print("❌ Download verification failed.")
         
         driver.quit()
+        active_driver = None
         print("✅ Browser closed. Expert answer automation complete!")
         return download_success
         
     except Exception as e:
         print(f"Error in scraping process: {e}")
-        driver.quit()
+        if driver:
+            try:
+                driver.quit()
+            except:
+                pass
+        active_driver = None
         return False
 
 if __name__ == "__main__":

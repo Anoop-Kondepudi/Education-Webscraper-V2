@@ -2,7 +2,8 @@ import os
 import time
 import glob
 import shutil
-import subprocess
+import signal
+import sys
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
@@ -17,6 +18,9 @@ DOWNLOADS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__
 # Cache the geckodriver path to avoid reinstalling it multiple times
 GECKO_DRIVER_PATH = None
 
+# Keep track of active browser instances for cleanup
+active_browsers = []
+
 def get_gecko_driver_path():
     """Get and cache the geckodriver path"""
     global GECKO_DRIVER_PATH
@@ -24,20 +28,6 @@ def get_gecko_driver_path():
         GECKO_DRIVER_PATH = GeckoDriverManager().install()
         print(f"✅ GeckoDriver installed at: {GECKO_DRIVER_PATH}")
     return GECKO_DRIVER_PATH
-
-def kill_all_firefox_instances():
-    """Kill all running Firefox processes to ensure clean start"""
-    try:
-        if os.name == 'nt':  # Windows
-            subprocess.call("taskkill /f /im firefox.exe", shell=True)
-            subprocess.call("taskkill /f /im geckodriver.exe", shell=True)
-        else:  # Mac/Linux
-            subprocess.call("pkill -f firefox", shell=True)
-            subprocess.call("pkill -f geckodriver", shell=True)
-        print("🧹 Cleaned up any existing Firefox processes")
-        time.sleep(1)  # Give time for processes to fully terminate
-    except Exception as e:
-        print(f"Warning: Could not kill Firefox processes: {e}")
 
 def get_latest_downloaded_file():
     """Get the most recently downloaded HTML file"""
@@ -92,6 +82,19 @@ def rename_downloaded_file(file_type):
         print(f"❌ Error renaming file: {e}")
         return latest_file
 
+def cleanup_resources():
+    """Clean up any resources when the script exits"""
+    print("\n🧹 Cleaning up resources...")
+    
+    # Nothing to clean up currently as browser instances are handled in their own modules
+    print("✅ Cleanup complete")
+
+def signal_handler(sig, frame):
+    """Handle interruption signals (Ctrl+C)"""
+    print("\n⚠️ Received termination signal. Closing gracefully...")
+    cleanup_resources()
+    sys.exit(0)
+
 def process_brainly_question(url):
     """Process a Brainly question URL to get both community and expert answers if available"""
     print(f"🚀 Starting Brainly scraper for URL: {url}")
@@ -99,15 +102,12 @@ def process_brainly_question(url):
     # Pre-install geckodriver to avoid multiple installations
     get_gecko_driver_path()
     
-    # Clean up any existing Firefox instances
-    kill_all_firefox_instances()
-    
     # Step 1: Scrape the community answer and check for expert answer existence
     print("\n📥 GETTING COMMUNITY ANSWER...")
     community_success, has_expert_answer = brainly_community.scrape_brainly(url)
     
     # Wait a moment to ensure file is fully written and browser is fully closed
-    time.sleep(3)
+    time.sleep(2)
     
     # Step 2: Rename the community answer file
     if community_success:
@@ -115,26 +115,23 @@ def process_brainly_question(url):
         
         if not community_file:
             print("❌ Failed to get community answer, stopping process")
-            kill_all_firefox_instances()  # Final cleanup
             return
     else:
         print("❌ Failed to get community answer, stopping process")
-        kill_all_firefox_instances()  # Final cleanup
         return
     
-    # Step 3: Make sure Firefox is fully closed before opening next instance
-    kill_all_firefox_instances()
-    time.sleep(1)  # Short delay to ensure resources are released
+    # Small delay before starting the next browser instance
+    time.sleep(1)
     
-    # Step 4: If expert answer exists, scrape it
+    # Step 3: If expert answer exists, scrape it
     if has_expert_answer:
         print("\n📥 GETTING EXPERT ANSWER...")
         brainly_expert.scrape_brainly(url)
         
         # Wait a moment to ensure file is fully written
-        time.sleep(3)
+        time.sleep(2)
         
-        # Step 5: Rename the expert answer file
+        # Step 4: Rename the expert answer file
         expert_file = rename_downloaded_file("expert")
         
         if expert_file:
@@ -144,13 +141,27 @@ def process_brainly_question(url):
     else:
         print("\nℹ️ No expert answer available for this question")
     
-    # Final cleanup
-    kill_all_firefox_instances()
-    
     print("\n✅ Brainly scraping complete!")
     print(f"✅ Community answer saved as: {os.path.basename(community_file)}")
 
+def main():
+    """Main function that sets up signal handlers and initiates the process"""
+    # Set up signal handlers for graceful termination
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
+    
+    # Example URL - you can change this or accept command line arguments
+    if len(sys.argv) > 1:
+        url = sys.argv[1]
+    else:
+        url = "https://brainly.com/question/9080526"
+    
+    try:
+        process_brainly_question(url)
+    except Exception as e:
+        print(f"Error in main process: {e}")
+    finally:
+        cleanup_resources()
+
 if __name__ == "__main__":
-    # Example URL - you can change this or make it accept command line arguments
-    test_url = "https://brainly.com/question/11514663"
-    process_brainly_question(test_url)
+    main()

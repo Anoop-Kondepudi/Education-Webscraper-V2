@@ -1,6 +1,7 @@
 import time
 import os
 import glob
+import atexit
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
@@ -13,8 +14,27 @@ FIREFOX_PROFILE_PATH = "/Users/anoopkondepudi/Library/Application Support/Firefo
 # Correct path to Downloaded Files folder
 DOWNLOADS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Downloaded Files")
 
+# Keep track of active browser instances
+active_driver = None
+
+def close_active_driver():
+    """Close any active driver when the module exits"""
+    global active_driver
+    if active_driver:
+        try:
+            active_driver.quit()
+            print("✅ Cleaned up community browser instance on exit")
+        except Exception as e:
+            print(f"Warning: Error closing browser: {e}")
+        active_driver = None
+
+# Register the cleanup function
+atexit.register(close_active_driver)
+
 def setup_driver():
     """Set up and return Firefox WebDriver."""
+    global active_driver
+    
     options = webdriver.FirefoxOptions()
     options.headless = True  # Run in headless mode
     options.add_argument("--headless")
@@ -48,8 +68,8 @@ def setup_driver():
     profile.set_preference("browser.helperApps.neverAsk.saveToDisk", "text/html")
     print("✅ Download dialogs disabled")
     
-    driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
-    return driver
+    active_driver = webdriver.Firefox(service=FirefoxService(GeckoDriverManager().install()), options=options)
+    return active_driver
 
 def check_for_expert_answer(driver):
     """Check if the page has an expert answer section"""
@@ -57,41 +77,72 @@ def check_for_expert_answer(driver):
     page_html = driver.page_source
     
     try:
-        # Check for the specific element structure first (fastest)
-        if '>Community<' in page_html and '>Expert<' in page_html:
-            expert_answer_exists = True
-            print("✅ Expert answer detected via text content inspection")
-            return expert_answer_exists
-            
-        # Then check for answer switch elements
-        if "#answer-switch" in page_html or "answer-switch" in page_html:
-            expert_answer_exists = True
-            print("✅ Expert answer detected via HTML inspection")
-            return expert_answer_exists
-            
-        # If HTML inspection doesn't work, try using direct selectors (though less reliable with JS disabled)
-        try:
-            # Try a few selectors that might indicate an expert answer
-            selectors = [
-                "#answer-switch",
-                ".answer-switch",
-                "[data-testid='answer-switch']",
-                "#main-content > div > div:nth-child(2) > section > div > div > div"
-            ]
-            
-            for selector in selectors:
-                try:
-                    driver.find_element(By.CSS_SELECTOR, selector)
+        # Check for specific data-testid attributes from the new UI
+        data_testid_indicators = [
+            'data-testid="multi_answer_tab_expert"',
+            'multi_answer_tab_expert'
+        ]
+        
+        for indicator in data_testid_indicators:
+            if indicator in page_html:
+                expert_answer_exists = True
+                print(f"✅ Expert answer detected via data-testid: '{indicator}'")
+                return expert_answer_exists
+        
+        # Check for class patterns that indicate the expert UI components
+        class_indicators = [
+            'sg-icon--icon-green-60',  # The green checkmark icon next to Brainly
+            'sg-button--transparent'   # The tab button styling
+        ]
+        
+        for indicator in class_indicators:
+            if indicator in page_html:
+                # If we find these classes and also find "Experts" text nearby
+                if "by Experts" in page_html or ">by Experts<" in page_html:
                     expert_answer_exists = True
-                    print(f"✅ Expert answer detected via selector: {selector}")
-                    break
-                except NoSuchElementException:
-                    continue
-        except:
-            # If selenium can't find elements (JS disabled may affect this), 
-            # we'll rely on the HTML inspection above
-            pass
+                    print(f"✅ Expert answer detected via class pattern: '{indicator}' with 'by Experts' text")
+                    return expert_answer_exists
+        
+        # Try to find the expert tabs using XPath based on the HTML structure shown
+        try:
+            # Look for button with multi_answer_tab_expert data-testid
+            expert_tab_xpath = '//button[@data-testid="multi_answer_tab_expert"]'
+            if driver.find_elements(By.XPATH, expert_tab_xpath):
+                expert_answer_exists = True
+                print("✅ Expert answer detected via XPath for multi_answer_tab_expert")
+                return expert_answer_exists
+                
+            # Look for the specific div structure shown in the screenshots
+            expert_text_xpath = '//div[contains(@class, "sg-text") and contains(text(), "by") and contains(following-sibling::text(), "Experts")]'
+            if driver.find_elements(By.XPATH, expert_text_xpath):
+                expert_answer_exists = True
+                print("✅ Expert answer detected via XPath for 'by Experts' text structure")
+                return expert_answer_exists
             
+            # Look for the green checkmark icon
+            green_icon_xpath = '//div[contains(@class, "sg-icon--icon-green-60")]'
+            if driver.find_elements(By.XPATH, green_icon_xpath):
+                expert_answer_exists = True
+                print("✅ Expert answer detected via XPath for green checkmark icon")
+                return expert_answer_exists
+        except Exception as selector_error:
+            print(f"Warning: Error in selector detection: {selector_error}")
+        
+        # If we still haven't found anything, look for fragments that might indicate expert answers
+        text_fragments = [
+            '>Brainly<',
+            '>by Experts<',
+            'Community</button>',
+            'Experts</button>'
+        ]
+        
+        # Check if multiple fragments exist together
+        fragments_found = sum(1 for fragment in text_fragments if fragment in page_html)
+        if fragments_found >= 2:  # If we find at least 2 fragments
+            expert_answer_exists = True
+            print(f"✅ Expert answer detected via multiple text fragments ({fragments_found} found)")
+            return expert_answer_exists
+        
         if not expert_answer_exists:
             print("ℹ️ No expert answer detected")
             
@@ -139,6 +190,7 @@ def scrape_brainly(url):
     Returns:
         tuple: (download_success, expert_answer_exists)
     """
+    global active_driver
     driver = setup_driver()
     download_success = False
     expert_answer_exists = False
@@ -161,13 +213,19 @@ def scrape_brainly(url):
             print("❌ Download verification failed. Possible captcha or error.")
         
         driver.quit()
+        active_driver = None
         print("✅ Browser closed. Community answer automation complete!")
         
         return (download_success, expert_answer_exists)
         
     except Exception as e:
         print(f"Error in scraping process: {e}")
-        driver.quit()
+        if driver:
+            try:
+                driver.quit()
+            except:
+                pass
+        active_driver = None
         return (False, False)
 
 if __name__ == "__main__":
