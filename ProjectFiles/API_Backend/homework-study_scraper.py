@@ -15,9 +15,7 @@ def get_headers():
     ua = UserAgent()
     return {
         'User-Agent': ua.random,
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.5',
-        'Connection': 'keep-alive',
+        "upgrade-insecure-requests": "1",
     }
 
 def load_cookies():
@@ -106,7 +104,7 @@ def generate_html(question_text, answer_html, context):
             src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
         </script>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <title>Study.com Answer | Hero Bot</title>
+        <title>Study.com Answer | Study Solutions</title>
         <style>
             body {{ background-color: #1B1D28; color: white; font-family: Arial, sans-serif; padding: 20px; }}
             .container {{ max-width: 900px; margin: auto; background: #282E3D; padding: 20px; border-radius: 10px; }}
@@ -123,7 +121,7 @@ def generate_html(question_text, answer_html, context):
     </head>
     <body>
         <div class="container">
-            <h1 class="title">Study.com Question & Answer | Hero Bot</h1>
+            <h1 class="title">Study.com Question & Answer | Study Solutions</h1>
             <div class='contentBox'>
                 <h2>Question</h2>
                 {question_text}

@@ -1,35 +1,7 @@
 [
     {
-        "domain": ".homework.study.com",
-        "expirationDate": 1773411400,
-        "hostOnly": false,
-        "httpOnly": false,
-        "name": "__stripe_mid",
-        "path": "/",
-        "sameSite": "lax",
-        "secure": false,
-        "session": false,
-        "storeId": "0",
-        "value": "11b7a7f0-61ea-4281-9a84-b4cf237f85ab9e1ecb",
-        "id": 1
-    },
-    {
-        "domain": ".homework.study.com",
-        "expirationDate": 1741877200,
-        "hostOnly": false,
-        "httpOnly": false,
-        "name": "__stripe_sid",
-        "path": "/",
-        "sameSite": "lax",
-        "secure": false,
-        "session": false,
-        "storeId": "0",
-        "value": "373bf06f-8c01-4b58-bec3-35ae049a708b327ad3",
-        "id": 2
-    },
-    {
         "domain": ".study.com",
-        "expirationDate": 1773410916,
+        "expirationDate": 1777165939,
         "hostOnly": false,
         "httpOnly": false,
         "name": "__stripe_mid",
@@ -39,11 +11,11 @@
         "session": false,
         "storeId": "0",
         "value": "091fe8d4-588d-4319-8250-b25ad4d8cdbbcdeb18",
-        "id": 3
+        "id": 1
     },
     {
         "domain": ".study.com",
-        "expirationDate": 1741876716,
+        "expirationDate": 1745631739,
         "hostOnly": false,
         "httpOnly": false,
         "name": "__stripe_sid",
@@ -52,8 +24,22 @@
         "secure": false,
         "session": false,
         "storeId": "0",
-        "value": "373bf06f-8c01-4b58-bec3-35ae049a708b327ad3",
-        "id": 4
+        "value": "6bcfa6e2-8192-4dcf-8cde-0c873606c829effa23",
+        "id": 2
+    },
+    {
+        "domain": ".study.com",
+        "expirationDate": 1753405931,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "_fbp",
+        "path": "/",
+        "sameSite": "lax",
+        "secure": false,
+        "session": false,
+        "storeId": "0",
+        "value": "fb.1.1745362589893.907031956834895128",
+        "id": 3
     },
     {
         "domain": ".study.com",
@@ -67,6 +53,20 @@
         "session": false,
         "storeId": "0",
         "value": "D",
+        "id": 4
+    },
+    {
+        "domain": ".study.com",
+        "expirationDate": 1753405930,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "_rdt_uuid",
+        "path": "/",
+        "sameSite": "strict",
+        "secure": true,
+        "session": false,
+        "storeId": "0",
+        "value": "1745362589551.8bd74990-f3f4-4bba-8f15-79cedb4cc96b",
         "id": 5
     },
     {
@@ -85,7 +85,48 @@
     },
     {
         "domain": ".study.com",
-        "expirationDate": 1741878998,
+        "expirationDate": 1745716330,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "_uetsid",
+        "path": "/",
+        "sameSite": "unspecified",
+        "secure": false,
+        "session": false,
+        "storeId": "0",
+        "value": "7a8da960223b11f096401f08b434711f",
+        "id": 7
+    },
+    {
+        "domain": ".study.com",
+        "expirationDate": 1779325930,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "_uetvid",
+        "path": "/",
+        "sameSite": "unspecified",
+        "secure": false,
+        "session": false,
+        "storeId": "0",
+        "value": "073343701fcd11f0ad466b41cbea163a",
+        "id": 8
+    },
+    {
+        "domain": ".study.com",
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "aens",
+        "path": "/",
+        "sameSite": "unspecified",
+        "secure": false,
+        "session": true,
+        "storeId": "0",
+        "value": "enp",
+        "id": 9
+    },
+    {
+        "domain": ".study.com",
+        "expirationDate": 1745633538,
         "hostOnly": false,
         "httpOnly": false,
         "name": "announcements-date",
@@ -94,12 +135,12 @@
         "secure": false,
         "session": false,
         "storeId": "0",
-        "value": "2025-03-13T09%3A16%3A38-05%3A00",
-        "id": 7
+        "value": "2025-04-25T20%3A12%3A18-05%3A00",
+        "id": 10
     },
     {
         "domain": ".study.com",
-        "expirationDate": 1776434895.330983,
+        "expirationDate": 1780189929.117234,
         "hostOnly": false,
         "httpOnly": false,
         "name": "ariel",
@@ -109,11 +150,11 @@
         "session": false,
         "storeId": "0",
         "value": "b69b1b643e50a66c70e37e22a57427d4",
-        "id": 8
+        "id": 11
     },
     {
         "domain": ".study.com",
-        "expirationDate": 1742479713.411766,
+        "expirationDate": 1746234736.729656,
         "hostOnly": false,
         "httpOnly": false,
         "name": "cocoon",
@@ -123,11 +164,11 @@
         "session": false,
         "storeId": "0",
         "value": "\"\"",
-        "id": 9
+        "id": 12
     },
     {
         "domain": ".study.com",
-        "expirationDate": 1773411397.836708,
+        "expirationDate": 1777165937.769424,
         "hostOnly": false,
         "httpOnly": false,
         "name": "datadome",
@@ -136,12 +177,12 @@
         "secure": true,
         "session": false,
         "storeId": "0",
-        "value": "GJtn2aWxrr8aRYhxxykMJihmgZSm5PMqJ_TL18XwLZbwKNUsLjyZJi3McnPkMqWMaMRsbEGFV3xDmpGApXfaBZNJWozFbESWpQGTXmPEhdDiV786WmYPIAtr~gO52I4c",
-        "id": 10
+        "value": "dTd37Ti7Z8WQKQSVxieoXrWCwMegwAqNKHoKuwGktqgB012Ivh1ibZpvgaQDr9_Djahkxg41339R9KuStwb02FCdVPt1RnFHyPMov4TPcacFoV0TgariE9mFnFa_K1Ud",
+        "id": 13
     },
     {
         "domain": ".study.com",
-        "expirationDate": 1776434895.330859,
+        "expirationDate": 1780189929.117056,
         "hostOnly": false,
         "httpOnly": true,
         "name": "JSESSIONID",
@@ -150,12 +191,12 @@
         "secure": true,
         "session": false,
         "storeId": "0",
-        "value": "520F587966A3779567C6D5D4B2A0A0D7",
-        "id": 11
+        "value": "294FA456B6DE6A1D07F6F614015B74EB",
+        "id": 14
     },
     {
         "domain": ".study.com",
-        "expirationDate": 1776434912.996228,
+        "expirationDate": 1780189936.306161,
         "hostOnly": false,
         "httpOnly": false,
         "name": "member",
@@ -165,7 +206,7 @@
         "session": false,
         "storeId": "0",
         "value": "1523320474000",
-        "id": 12
+        "id": 15
     },
     {
         "domain": ".study.com",
@@ -177,12 +218,12 @@
         "secure": false,
         "session": true,
         "storeId": "0",
-        "value": "08aaef40d0992ff865b9673c7445965e",
-        "id": 13
+        "value": "a37d7309292ca953c83fc7f774fadef5",
+        "id": 16
     },
     {
         "domain": ".study.com",
-        "expirationDate": 1773410912.996091,
+        "expirationDate": 1777165936.30585,
         "hostOnly": false,
         "httpOnly": true,
         "name": "rm",
@@ -191,12 +232,12 @@
         "secure": false,
         "session": false,
         "storeId": "0",
-        "value": "eitjTDZmNWx4MElHV3RWTDZSS2tUQT09Ok13NjN3amdDSTlBdEhSL2xOdzBrT2c9PQ",
-        "id": 14
+        "value": "OERjeFFjTEJXbjlvWTY5aW5pWmdZdz09OklYNUk3OU50bzlCcVFSL0lweEhBNmc9PQ",
+        "id": 17
     },
     {
         "domain": ".study.com",
-        "expirationDate": 1741961795.489623,
+        "expirationDate": 1745716336.729432,
         "hostOnly": false,
         "httpOnly": false,
         "name": "ssoe_debug",
@@ -205,12 +246,12 @@
         "secure": false,
         "session": false,
         "storeId": "0",
-        "value": "braintree-V3.emphasizeCoupon-x.feedbackCarouselReact-x.forum-partnersonly.hideSixMonthCta-hide.homepage2024-v5Carousel.jsPaywall-x.keysToCollegeBanner-control.lessonRebrand2025-control.mobileApp-control.noCouponsForPaid-control.regPhoneAllGoals-control.smsAcquisitionV3-x.testPrepYoutubeVideoSection-x.topNavRebrand2025-control.visitorIntentSurvey-control",
-        "id": 15
+        "value": "braintree-V3.collegePackageProducts-v1.emphasizeCoupon-x.feedbackCarouselReact-x.hideSixMonthCta-hide.highIntentSinglePageCheckoutNovember-expanded.homepage2024-v5Carousel.jsPaywall-x.lessonRebrand2025-control.mobileApp-control.noCouponsForPaid-control.preloaderRebrand2025-control.regPhoneAllGoals-control.smsAcquisitionV3-x.testPrepYoutubeVideoSection-x.topNavOrder2025-x.topNavRebrand2025-control.tpCompetitorComparison-x.visitorIntentSurvey-control",
+        "id": 18
     },
     {
         "domain": ".study.com",
-        "expirationDate": 1741878502.379997,
+        "expirationDate": 1745633531.17304,
         "hostOnly": false,
         "httpOnly": false,
         "name": "surveyCriteriaUrlPatterns",
@@ -220,23 +261,10 @@
         "session": false,
         "storeId": "0",
         "value": "INVALID_INELIGIBLE",
-        "id": 16
+        "id": 19
     },
     {
-        "domain": "homework.study.com",
-        "hostOnly": true,
-        "httpOnly": false,
-        "name": "hasSeen",
-        "path": "/explanation",
-        "sameSite": "unspecified",
-        "secure": false,
-        "session": true,
-        "storeId": "0",
-        "value": "true",
-        "id": 17
-    },
-    {
-        "domain": "homework.study.com",
+        "domain": "study.com",
         "hostOnly": true,
         "httpOnly": false,
         "name": "NODEID",
@@ -245,7 +273,7 @@
         "secure": false,
         "session": true,
         "storeId": "0",
-        "value": "c300dd9c",
-        "id": 18
+        "value": "5c5a0177",
+        "id": 20
     }
     ]
