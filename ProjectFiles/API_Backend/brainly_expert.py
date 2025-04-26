@@ -7,7 +7,7 @@ from selenium.webdriver.firefox.service import Service as FirefoxService
 from webdriver_manager.firefox import GeckoDriverManager
 
 # Use dedicated Brainly automation Firefox profile
-FIREFOX_PROFILE_PATH = "/Users/anoopkondepudi/Library/Application Support/Firefox/Profiles/8wofgziv.brainly-expert"
+FIREFOX_PROFILE_PATH = "/Users/anoopkondepudi/Desktop/Education Webscraper V2/Education-Webscraper-V2/ProjectFiles/API_Backend/firefox-profiles/8wofgziv.brainly-expert"
 
 # Correct path to Downloaded Files folder
 DOWNLOADS_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "Downloaded Files")
