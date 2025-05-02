@@ -1,0 +1,1765 @@
+const { Client, Intents } = require("discord.js");
+const moment = require("moment-timezone");
+//const { sendPostRequest } = require('./like');
+const fs = require("fs");
+//const keepAlive = require("./keep_alive.js");
+const client = require('./p.js');
+
+const reviewFilePath = 'review.txt';
+//const katex = require('katex');
+const request = require("request"); // Add this import
+const MongoClient = require("mongodb").MongoClient;
+const axios = require("axios");
+const {
+  MessageEmbed,
+  MessageActionRow,
+  MessageButton,
+  MessageAttachment,
+} = require("discord.js");
+const crypto = require("crypto");
+const adminUserId = "1141758865956937868";
+let channelIds = fs
+  .readFileSync("channels.txt", "utf8")
+  .split("\n")
+  .map((line) => line.trim());
+
+// The S3 file name
+const AWS = require("aws-sdk");
+const s3 = new AWS.S3({
+  accessKeyId: "AKIAYT66PGG477WVLA5X", // Replace with your AWS access key
+  secretAccessKey: "iH2hQJ1Wy42ukJzZHUhkv0fz/Hev4CgdDYimtbFH", // Replace with your AWS secret access key
+  region: "us-east-2", // Replace with your desired AWS region
+});
+
+// File path and name
+const filePath = "./Answer.html"; // Assuming your file is named "Answer.html"
+const fileName = "Answer.html"; // The S3 file name
+
+//const BucketNameAWS = 'sidhu5555'; // Replace with your AWS S3 bucket name
+//const AWS = require('aws-sdk');
+//const fs = require('fs');
+//const crypto = require('crypto');
+
+// Initialize AWS S3
+const svgImageMapping = {
+  Battery: "path-to-battery-image.svg",
+  Resistor: "path-to-resistor-image.svg",
+  Ground: "path-to-ground-image.svg",
+  // Add more mappings as needed
+};
+
+// Global variables to store like count and dislike count
+let likeCount = ''; // Initialize as empty string
+let dislikeCount = ''; // Initialize as empty string
+
+// Function to fetch and update the review counts
+async function fetchAndUpdateReviewCounts() {
+    try {
+        // Read the review counts from the file
+        const reviewData = fs.readFileSync(reviewFilePath, 'utf-8');
+        const [likeCountStr, dislikeCountStr] = reviewData.split('\n');
+
+        // Extract like count and dislike count
+        likeCount = likeCountStr.split(':')[1].trim(); // Update likeCount
+        dislikeCount = dislikeCountStr.split(':')[1].trim(); // Update dislikeCount
+
+        console.log('Like Count:', likeCount);
+        console.log('Dislike Count:', dislikeCount);
+
+        // Optionally, you can create and send an embed here
+        createAndSendEmbed();
+
+    } catch (error) {
+        console.error('Error fetching or updating review counts:', error.message);
+    }
+}
+// Fetch and update review counts when script is executed
+
+// Upload the file to AWS S3
+fs.readFile(filePath, "utf-8", (err, fileContent) => {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  const params = {
+    Bucket: "premium5555", // Replace with your AWS S3 bucket name
+    Key: fileName,
+    Body: fileContent,
+    ContentType: "text/html",
+  };
+
+  s3.putObject(params, (s3Err, data) => {
+    if (s3Err) {
+      console.error(s3Err);
+    } else {
+      console.log(`File uploaded successfully to ${data.Location}`);
+
+      // Generate a presigned URL for the uploaded file
+      const urlParams = {
+        Bucket: "YOUR_BUCKET_NAME", // Replace with your AWS S3 bucket name
+        Key: fileName,
+        Expires: 1800, // Expiration time in seconds (e.g., 30 minutes)
+      };
+
+      const presignedUrl = s3.getSignedUrl("getObject", urlParams);
+      console.log(`Presigned URL: ${presignedUrl}`);
+    }
+  });
+});
+const cookie1 = fs.readFileSync("cookie.txt", "utf8").trim();
+const cookie2 = fs.readFileSync("cookie.txt", "utf8").trim();
+const cookie3 = fs.readFileSync("cookie.txt", "utf8").trim(); // Adding cookie3
+
+// Choose a random cookie from any of the files
+const randomCookie = Math.random() < 0.33 ? cookie1 : (Math.random() < 0.5 ? cookie2 : cookie3);
+
+//const cookies = fs.readFileSync("cookie.txt", "utf8").trim().split("\n");
+const headers = {
+  // Your headers here
+  "User-Agent":
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/112.0",
+  Accept: "*/*, application/json",
+  "Accept-Language": "en-US,en;q=0.5",
+  "Accept-Encoding": "gzip, deflate, br",
+  Referer: "https://www.chegg.com/",
+  "content-type": "application/json",
+  "apollographql-client-name": "chegg-web",
+  "apollographql-client-version": "main-5df873cd-4034069560",
+  Authorization:
+    "Basic TnNZS3dJMGxMdVhBQWQwenFTMHFlak5UVXAwb1l1WDY6R09JZVdFRnVvNndRRFZ4Ug==",
+  Origin: "https://www.chegg.com",
+  Connection: "keep-alive",
+  Cookie: randomCookie,
+  "Sec-Fetch-Dest": "empty",
+  "Sec-Fetch-Mode": "cors",
+  "Sec-Fetch-Site": "same-site",
+  TE: "trailers",
+};
+
+
+
+
+
+const token =
+  "MTI4ODExNDgzNzk5MzU1MzkyMA.GM4uQ1.8eRCJm4JxbeYVFtix2jD8Ok8d0-ALLujdAFTqg"; // Replace with your Discord bot token
+const channelId = "1178554147289706547"; // Replace with your Discord channel ID
+const prefix = "!"; // Add your prefix here
+
+client.on("messageCreate", async (message) => {
+  if (!channelIds.includes(message.channel.id)) {
+    return; // Do nothing if not in the allowed channels
+  }
+  const channelId = message.channel.id;
+  const messageText = message.content;
+  if (channelId === channelId) {
+    // Use the variable 'channelId'
+    if (message.channel.id === "" && message.attachments.size > 0) {
+      const attachment = message.attachments.first(); // Get the
+      const url = attachment.url; // Get the URL of the attachment
+      const fetch = require("node-fetch");
+      const fs = require("fs").promises;
+      try {
+        const response = await fetch(url);
+        const buffer = await response.buffer();
+        await fs.writeFile("message.txt", buffer);
+        const content = (await fs.readFile("message.txt", "utf8")).replace(
+          /\r?\n|\r/g,
+          "",
+        );
+        await fs.appendFile("cookie.txt", "\n" + content);
+        const successEmbed = new Discord.MessageEmbed()
+          .setTitle("Success")
+          .setDescription("Cookie1 is successfully added")
+          .setColor(0x35ec08);
+        message.channel.send({ embeds: [successEmbed] });
+      } catch (error) {
+        console.error(error);
+        message.channel.send("There was an error processing your request.");
+      }
+    }
+    if (messageText.startsWith(prefix)) {
+      // Check if the message starts with the defined prefix
+      const command = messageText.slice(prefix.length).trim();
+
+      if (command === "hello") {
+        message.channel.send("Hello!");
+      }
+      if (command === "dels") {
+        if (message.author.id !== adminUserId) {
+          message.channel.send(
+            "Only admins can use the !changepoints command.",
+          );
+          return;
+        }
+        try {
+          // Clear the contents of the cookie.txt file
+          fs.writeFileSync("cookie.txt", "");
+
+          // Respond to the user
+          message.channel.send("Contents of cookie.txt cleared.");
+        } catch (error) {
+          console.error("Error clearing cookie.txt:", error);
+          message.channel.send("Error clearing cookie.txt.");
+        }
+      }
+    }
+    if (message.content.startsWith("!addp")) {
+      if (message.author.id !== adminUserId) {
+        message.channel.send("Only admins can use the !changepoints command.");
+        return;
+      }
+      // Extract the channel ID from the command
+      const command = message.content.slice("!add".length).trim();
+
+      // Remove any non-numeric characters
+      const channelId = command.replace(/\D/g, "");
+
+      // Check if the command is a valid channel ID
+      if (/^\d+$/.test(channelId)) {
+        // Check if the channel ID is already in the array
+        if (!channelIds.includes(channelId)) {
+          // Add the channel ID to the array
+          channelIds.push(channelId);
+
+          // Write the array back to channels.txt
+          fs.writeFileSync("channels.txt", channelIds.join("\n"));
+
+          // Respond to the user
+          message.channel.send(`Channel ID ${channelId} added to channels.txt`);
+        } else {
+          // Channel ID is already in the list
+          message.channel.send("Channel ID is already in the list.");
+        }
+        return;
+      } else {
+        // Invalid command format
+        message.channel.send(
+          "Invalid command format. Please use !add [ChannelID]",
+        );
+        return;
+      }
+    }
+    if (message.attachments.size > 0) {
+      // Loop through each attachment
+      message.attachments.forEach(async (attachment) => {
+        // Check if the attachment has a .txt extension
+        if (attachment.name.endsWith(".txt")) {
+          try {
+            // Download the file
+            const response = await axios.get(attachment.url);
+            const fileContent = response.data;
+
+            // Append the content to cookie.txt
+            fs.appendFileSync("cookie.txt", fileContent);
+
+            // Respond to the user
+            message.channel.send("File contents added to cookie.txt");
+          } catch (error) {
+            console.error("Error handling the attachment:", error);
+            message.channel.send("Error handling the attachment.");
+          }
+        }
+      });
+    } else {
+      const linkRegex = /(https?:\/\/[^\s]+)/g;
+      const links = messageText.match(linkRegex);
+
+      if (links) {
+        const url_chegg = links[0]; // Capture the link from the message.
+
+        // Check if the URL starts with the Chegg URL pattern.
+       if (url_chegg.startsWith("https://www.chegg.com/homework-help/questions-and-answers/")) {
+          console.log("Expert Q&A");
+          // Extract the portion of the URL before the question mark
+          const url_parts = url_chegg.split('?');
+          const url_before_question_mark = url_parts[0];
+          console.log("URL before question mark:", url_before_question_mark); // Log the extracted URL
+
+          const regex = /q(\d+)/;
+          const match = url_chegg.match(regex);
+          const numero = match[1];
+          const dataString = `{"operationName":"QnaPageAnswerSub","variables":{"id":${numero}},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"d0ae376e5622d9d80fdf46c37952445a8ce8306d6c8eddeb4f3ab6f30c022f59"}}}`;
+          const options = {
+            url: "https://gateway.chegg.com/one-graph/graphql",
+            method: "POST",
+            headers: headers,
+            gzip: true,
+            body: dataString,
+          };
+
+          request(options, callback);
+
+          function callback(error, response, body) {
+            if (!error && response.statusCode == 200) {
+              const json_request = body;
+               const jsonData = JSON.parse(body);
+                console.log(jsonData);
+
+              const obj = JSON.parse(json_request);
+            //  const data = JSON.parse(responseText);
+              console.log(obj);
+                //sendPostRequest(jsonData);
+
+              let authorFirstName,
+                authorLastName,
+                authorNickname,
+                authorAnswerCount,
+                answerHtml,
+                legacyId;
+              let answerHtmll = "";
+              try {
+                if (obj.data.questionByLegacyId.isAutomatedAnswer === true) {
+                    let answerHtml = obj.data.questionByLegacyId.displayAnswers.bodyMdText;
+                    let html_with_br = answerHtml.replace(/\n/g, "<br>");
+                    let answerHtmlu = html_with_br;
+                  answerHtmll += answerHtmlu;
+                    console.log(answerHtmll);
+                }
+
+
+
+              try {
+                const ecAnswers =
+                  obj.data.questionByLegacyId.displayAnswers.ecAnswers;
+
+                if (ecAnswers && ecAnswers.length > 0) {
+                  ecAnswers.forEach((ecAnswer, index) => {
+                    console.log(`Processing EC Answer ${index + 1}`, ecAnswer);
+
+                    // Check if answerData exists
+                    if (ecAnswer.answerData) {
+                      // Process finalAnswerHtml
+                      if (ecAnswer.answerData.finalAnswerHtml) {
+                        console.log("Processing finalAnswerHtml");
+                        const finalAnswerHtml =
+                          ecAnswer.answerData.finalAnswerHtml.join(" ");
+                        answerHtmll += finalAnswerHtml;
+                      }
+
+                      // Process generalGuidance
+                      if (ecAnswer.answerData.generalGuidance) {
+                        console.log("Processing generalGuidance");
+                        const generalGuidanceHtml =
+                          ecAnswer.answerData.generalGuidance
+                            .map((guide) => guide.html)
+                            .join(" ");
+
+                        // Wrap the general guidance in an <h2> tag with red color
+                        const redHeadingGeneralGuidance = `<h2 style="color: red;">General Guidance</h2>${generalGuidanceHtml}`;
+
+                        answerHtmll += redHeadingGeneralGuidance;
+                      }
+
+                      // Process steps
+
+                      // ...
+
+                      const katex = require("katex");
+
+                      // ...
+
+                      if (ecAnswer.answerData.steps) {
+                        console.log("Processing steps");
+                        ecAnswer.answerData.steps.forEach((step) => {
+                          const stepName = step.name || ""; // Get the step name (if available)
+                          const textHtml = step.textHtml || "";
+                          const hintsHtml = step.hintsHtml
+                            ? step.hintsHtml.join(" ")
+                            : "";
+                          const answerHtml = step.answerHtml || "";
+                          const explanationHtml = step.explanationHtml || "";
+
+                          // Convert math content to KaTeX HTML (if available)
+                          const mathContent = step.math || ""; // Assuming math content is stored in a property named 'math'
+                          const katexHtml = katex.renderToString(mathContent, {
+                            displayMode: true,
+                          }); // Use displayMode if it's a block equation
+
+                          // Wrap step content in an <h3> heading and include explanation, hints, math, etc.
+                          const stepContent = `
+        <h3>${stepName}</h3>
+        <h4>Explanation</h4>
+        ${explanationHtml}
+
+        ${katexHtml}
+        <h4>Hints</h4>
+        ${hintsHtml}
+        ${answerHtml}
+
+        ${textHtml}`;
+
+                          answerHtmll += stepContent;
+                        });
+                      }
+                    } else {
+                      console.log(
+                        `No answerData found for EC Answer ${index + 1}`,
+                      );
+                    }
+                  });
+                } else {
+                  console.log("No EC Answers found.");
+                }
+                answerHtml += answerHtmll;
+
+
+                try {
+                  legacyId =
+                    obj.data.questionByLegacyId.displayAnswers.htmlAnswers[0]
+                      .legacyId;
+                  authorFirstName =
+                    obj.data.questionByLegacyId.displayAnswers.htmlAnswers[0]
+                      .answerData.author.firstName;
+                  authorLastName =
+                    obj.data.questionByLegacyId.displayAnswers.htmlAnswers[0]
+                      .answerData.author.lastName;
+                  authorNickname =
+                    obj.data.questionByLegacyId.displayAnswers.htmlAnswers[0]
+                      .answerData.author.nickname;
+                  authorAnswerCount =
+                    obj.data.questionByLegacyId.displayAnswers.htmlAnswers[0]
+                      .answerData.author.answerCount;
+                  answerHtml =
+                    obj.data.questionByLegacyId.displayAnswers.htmlAnswers[0]
+                      .answerData.html;
+                } catch (error) {
+                  legacyId = null;
+                  authorFirstName = null;
+                  authorLastName = null;
+                  authorNickname = null;
+                  authorAnswerCount = null;
+
+                  try {
+                    const objeto = JSON.parse(json_request);
+                    const respuesta =
+                      objeto.data.questionByLegacyId.displayAnswers.sqnaAnswers
+                        .answerData[0].bodyV2.text;
+                    const objetoo = JSON.parse(respuesta);
+                    //const answer = objetoo.finalAnswer.blocks[0].block.editorContentState.blocks[0].text;
+                    const steps = objetoo.stepByStep.steps;
+                    //const answerHtmll = `<div>${answer}</div>`;
+                    console.log(obj.data.questionByLegacyId.displayAnswers);
+
+                    // Define a recursive function to process blocks
+                    //let stepsHtml = '';
+                    console.log(`1`, answerHtmll);
+                    const finalAnswerBlocks = objetoo.finalAnswer.blocks;
+                    let finalAnswerText = "";
+                    console.log("finalAnswerBlocks:", finalAnswerBlocks);
+
+                    // Function to handle nested text content
+                    function handleTextContent(contentItems, entityMap) {
+                      let currentTextStyle = "";
+                      let contentArray = [];
+
+                      contentItems.forEach((textItem) => {
+                        if (textItem.type === "text" && textItem.text) {
+                          let styledText = textItem.text;
+                          if (currentTextStyle.includes("BOLD")) {
+                            styledText = `<strong>${styledText}</strong>`;
+                          }
+                          if (currentTextStyle.includes("ITALIC")) {
+                            styledText = `<em>${styledText}</em>`;
+                          }
+                          contentArray.push(styledText);
+                        } else if (
+                          textItem.type === "inlineMath" &&
+                          textItem.content
+                        ) {
+                          const mathText = textItem.content[0]?.text || "";
+                          const inlineMathHtml = `<span class="math">\`${mathText}\`</span>`;
+                          contentArray.push(inlineMathHtml);
+                        } else if (textItem.content) {
+                          contentArray.push(
+                            ...handleTextContent(textItem.content, entityMap),
+                          );
+                        }
+
+                        if (
+                          textItem.inlineStyleRanges &&
+                          textItem.inlineStyleRanges.length
+                        ) {
+                          textItem.inlineStyleRanges.forEach((styleRange) => {
+                            if (styleRange.style === "BOLD") {
+                              currentTextStyle += "BOLD ";
+                            } else if (styleRange.style === "ITALIC") {
+                              currentTextStyle += "ITALIC ";
+                            }
+                          });
+                        }
+                      });
+
+                      return contentArray;
+                    }
+
+                    // Iterate through finalAnswer blocks to extract text and chemistry content
+                    finalAnswerBlocks.forEach((block) => {
+                      if (block.type === "TEXT") {
+                        const entityMap =
+                          block.block.editorContentState.entityMap || {};
+                        const blocks =
+                          block.block.editorContentState.content || [];
+                        const combinedContent = handleTextContent(
+                          blocks,
+                          entityMap,
+                        ).join("");
+                        finalAnswerText += `<p>${combinedContent}</p>`;
+                      } else if (block.type === "CHEMISTRY") {
+                        console.log("CHEMISTRY block properties:", block);
+
+                        if (block.block && Array.isArray(block.block.shapes)) {
+                          const shapes = block.block.shapes;
+
+                          if (shapes.length > 0) {
+                            shapes.forEach((shape) => {
+                              // Handle standard shapes like 'InlineChemShape', 'Bond', and 'CompoundShape'
+                              if (
+                                [
+                                  "InlineChemShape",
+                                  "Bond",
+                                  "CompoundShape",
+                                ].includes(shape.type)
+                              ) {
+                                // Existing processing logic here
+                              }
+                              // Handle additional shape types
+                              else if (
+                                shape.type === "ArcArrow" ||
+                                shape.type === "DoubleArrow"
+                              ) {
+                                // Process ArcArrow and DoubleArrow shapes
+                                const arrowHtml = `<div class="arrow" style="position: absolute; left: ${
+                                  shape.x
+                                }px; top: ${shape.y}px; width: ${
+                                  shape.w
+                                }px; height: ${shape.h}px; transform: rotate(${
+                                  shape.rotation || 0
+                                }deg);"></div>`;
+                                finalAnswerText += arrowHtml;
+                              } else if (shape.type === "Text") {
+                                // Process Text shapes
+                                const textHtml = `<span class="text" style="position: absolute; left: ${
+                                  shape.x
+                                }px; top: ${shape.y}px; font-size: ${
+                                  shape.style.fontSize || "1em"
+                                };">${shape.value[0]?.text || ""}</span>`;
+                                finalAnswerText += textHtml;
+                              } else {
+                                console.error(
+                                  "Unrecognized chemistry shape type:",
+                                  shape.type,
+                                );
+                              }
+                            });
+                          } else {
+                            console.error(
+                              "CHEMISTRY block shapes array is empty.",
+                            );
+                          }
+                        } else {
+                          console.error(
+                            "CHEMISTRY block does not contain valid shapes data.",
+                          );
+                        }
+                      }
+                    });
+
+                    console.log(finalAnswerText); // This will contain the final HTML content from all blocks
+                    const finalAnswerDiv = `
+                    <div id="finalAnswer" style="background-color: ; padding: 10px; border: 2px solid #ff69b4;">
+                      <h2>Final Answer</h2>
+                      ${finalAnswerText}
+                    </div>
+                    `;
+                   function createRectangleBox(stepName) {
+    return `<div style="width: 100%;">
+                <div style="border-bottom: 1px solid grey; width: 100%;"></div>
+                <div style="padding: 10px;">${stepName}</div>
+                <div style="border-bottom: 1px solid grey; width: 100%;"></div>
+            </div>`;
+}
+
+     
+
+
+                    let stepsHtml = ""; //let stepsHtml1='';
+                    let currentIndex = 0; // Initialize the current index for entity mapping
+                    steps.forEach((step, index) => {
+                      const stepName = step.name ? step.name : `Step ${index + 1}`;
+                      const stepNameWithBox = createRectangleBox(stepName); // Wrap step name in a rectangle box
+                      stepsHtml += `<h2>${stepNameWithBox}</h2>`;
+                      step.blocks.forEach((block) => {
+                        if (block.type === "TEXT") {
+                          const entityMap =
+                            block.block.editorContentState.entityMap || {};
+                          let contentArray = [];
+
+                          if (block.block.editorContentState.type === "doc") {
+                            function handleTextContent(contentItems) {
+                              let currentTextStyle = ""; // Reset for each block
+
+                              contentItems.forEach((textItem) => {
+                                if (textItem.type === "text" && textItem.text) {
+                                  let styledText = textItem.text;
+                                  if (currentTextStyle.includes("BOLD")) {
+                                    styledText = `<strong>${styledText}</strong>`;
+                                  }
+                                  if (currentTextStyle.includes("ITALIC")) {
+                                    styledText = `<em>${styledText}</em>`;
+                                  }
+                                  contentArray.push(styledText);
+                                } else if (
+                                  textItem.type === "inlineMath" &&
+                                  textItem.content
+                                ) {
+                                  const mathText =
+                                    textItem.content[0]?.text || ""; // Access the first element in content array
+
+                                  // Create HTML with a <span> element containing the 'math' class
+                                 const inlineMathHtml = `<span class="math">\`${mathText}\`</span>`;
+                                 // const inlineMathHtml = `<span class="math">${mathText}</span>`;
+                                  // Push the HTML string into contentArray
+                                  contentArray.push(inlineMathHtml);
+                                } else if (textItem.content) {
+                                  handleTextContent(textItem.content);
+                                }
+
+                                if (
+                                  textItem.inlineStyleRanges &&
+                                  textItem.inlineStyleRanges.length
+                                ) {
+                                  textItem.inlineStyleRanges.forEach(
+                                    (styleRange) => {
+                                      if (styleRange.style === "BOLD") {
+                                        currentTextStyle += "BOLD ";
+                                      } else if (
+                                        styleRange.style === "ITALIC"
+                                      ) {
+                                        currentTextStyle += "ITALIC ";
+                                      }
+                                    },
+                                  );
+                                }
+                              });
+                            }
+
+                            const blocks =
+                              block.block.editorContentState.content || [];
+                            handleTextContent(blocks);
+
+                            // Combine contentArray elements without any delimiter
+                            const combinedContent = contentArray.join("");
+
+                            // Wrap the combined content in a <p> tag
+                            const paragraphHtml = `<p>${combinedContent}</p>`;
+
+                            // Add the entire paragraphHtml to stepsHtml
+                            stepsHtml += paragraphHtml;
+                          } else {
+                            const blocks =
+                              block.block.editorContentState.blocks;
+                            blocks.forEach((blockItem) => {
+                              //  let foundEntity = false;
+
+                              // Assuming each block has entityRanges array
+                              // Initialize a flag to track if any entity is processed
+                              let entityProcessed = false;
+                              // Check if blockItem has entityRanges
+                              if (
+                                blockItem.entityRanges &&
+                                blockItem.entityRanges.length
+                              ) {
+                                // Iterate over the entityRanges to process entities
+                                blockItem.entityRanges.forEach(
+                                  (entityRange) => {
+                                    const entityKey =
+                                      entityRange.key.toString();
+                                    const entity = entityMap[entityKey];
+
+                                    if (
+                                      entity &&
+                                      entity.data &&
+                                      entity.data.text
+                                    ) {
+                                      // If an entity with text is found, push its formatted text to contentArray
+                                      contentArray.push(
+                                        `<span class="math">\`${entity.data.text}\`</span><br>`,
+                                      );
+                                    }
+                                  },
+                                );
+                              } else if (blockItem.text) {
+                                // If there are no entities, but there is blockItem text, push the text to contentArray
+                                contentArray.push(blockItem.text);
+                              }
+
+                              // Check if blockItem has text and also has entity ranges
+                              else if (
+                                blockItem.entityRanges &&
+                                blockItem.entityRanges.length
+                              ) {
+                                // If there's no text but there are entity ranges, iterate and process them
+                                blockItem.entityRanges.forEach(
+                                  (entityRange) => {
+                                    const entityKey =
+                                      entityRange.key.toString();
+                                    const entity = entityMap[entityKey];
+
+                                    if (entity) {
+                                      // Process the entity as required
+                                      if (
+                                        entity.type === "INLINE_EQUATION" &&
+                                        entity.data &&
+                                        entity.data.text
+                                      ) {
+                                        contentArray.push(
+                                          `<span class="math">\`${entity.data.text}\`</span><br>`,
+                                        );
+                                        entityProcessed = true;
+                                      }
+                                    }
+                                  },
+                                );
+                              }
+
+                              // If after processing entityRanges, no entities were processed and blockItem has text, push the text to contentArray
+                              if (!entityProcessed && blockItem.text) {
+                                contentArray.push(blockItem.text);
+                              }
+                            });
+
+                            // Combine contentArray elements without a delimiter
+                            const combinedContent = contentArray.join("");
+                            let paragraphHtml =
+                              "<p><strong>paragraphhtml in text block:</strong> ";
+                            // Wrap the combined content in a <p> tag
+                            paragraphHtml = `<p>${combinedContent}</p>`;
+
+                            // Add the entire paragraphHtml to stepsHtml
+                            stepsHtml += paragraphHtml;
+                          }
+                        }
+
+                        if (block.type === "MATH_IN_TEXT") {
+                          if (
+                            block.block.expression.editorContentState &&
+                            block.block.result.editorContentState
+                          ) {
+                            const mathExpression =
+                              block.block.expression.editorContentState
+                                .blocks[0]?.text || "";
+                            const mathResult =
+                              block.block.result.editorContentState.blocks[0]
+                                ?.text || "";
+
+                            // Using backticks to delimit AsciiMath, no backslashes are required around the backticks
+                            const mathHtml = `<p>Math Expression: <span class="math">\`${mathExpression}\`</span></p><p>Result: <span class="math">\`${mathResult}\`</span></p>`;
+
+                            // Add the entire mathHtml to stepsHtml or any other relevant container
+                            stepsHtml += mathHtml;
+                          }
+                        }
+                        if (block.type === "CODE_SNIPPET") {
+                          console.log("CODE_SNIPPET block properties:", block);
+
+                          if (block.block && block.block.content) {
+                            const contentArray = block.block.content.content; // Access the content array
+
+                            // Check if there is content in the array
+                            if (contentArray.length > 0) {
+                              const codeContent = contentArray[0]; // Assuming the code content is the first item
+
+                              // Check if the code content is a codeBlock and has text
+                              if (
+                                codeContent.type === "codeBlock" &&
+                                codeContent.content &&
+                                codeContent.content[0]
+                              ) {
+                                const codeText = codeContent.content[0].text;
+
+                                // Escape HTML characters in code content to prevent rendering issues
+                                const escapedCodeData = codeText
+                                  .replace(/&/g, "&amp;")
+                                  .replace(/</g, "&lt;")
+                                  .replace(/>/g, "&gt;");
+
+                                // Create HTML <pre> element with <code> tags and insert the code content
+                                const codeHtml = `<pre class="code-snippet"><code>${escapedCodeData}</code></pre>`;
+
+                                // Append 'codeHtml' to 'stepsHtml'
+                                stepsHtml += codeHtml;
+
+                                // Now 'stepsHtml' contains the HTML representation of the code content
+                                console.log("HTML Code:", codeHtml);
+                              } else {
+                                console.error(
+                                  "CODE_SNIPPET content does not contain valid code data.",
+                                );
+                              }
+                            } else {
+                              console.error(
+                                "CODE_SNIPPET content array is empty.",
+                              );
+                            }
+                          } else {
+                            console.error(
+                              "CODE_SNIPPET block does not contain valid content data.",
+                            );
+                          }
+                        } else {
+                          console.log("Not a CODE_SNIPPET block");
+                        }
+
+                    if (block.type === "ACCOUNTING_TABLE") {
+    // Process each 'ACCOUNTING_TABLE' block
+    console.log("Found ACCOUNTING_TABLE type");
+
+    if (!block.block || !block.block.entries) {
+        console.error(
+            "Missing expected properties for ACCOUNTING_TABLE block:",
+            block,
+        );
+        return;
+    }
+
+    const entries = block.block.entries;
+    let tableHtml =
+        '<table border="1" style="width:100%; border-collapse: collapse; background-color: #FFFDD0;">';
+
+    entries.forEach((entry) => {
+        const headerCells = entry.headerCells;
+        const bodyCells = entry.bodyCells;
+
+        // Add header row
+        tableHtml += "<tr>";
+        Object.keys(headerCells).forEach((headerKey) => {
+            const headerContent =
+                headerCells[headerKey].value || "";
+            tableHtml += `<th style="border: 1px solid #000; padding: 8px;">${headerContent}</th>`;
+        });
+        tableHtml += "</tr>";
+
+        // Add body rows
+        const numRows =
+            Object.keys(bodyCells).length /
+            Object.keys(headerCells).length;
+        for (let i = 0; i < numRows; i++) {
+            tableHtml += "<tr>";
+            Object.keys(headerCells).forEach((_, columnIndex) => {
+                const cellKey = `${columnIndex}-${i}`;
+                const cell = bodyCells[cellKey];
+                if (cell && cell.value !== undefined) {
+                    console.log(`Cell ${cellKey} Value Type:`, typeof cell.value); // Debug statement
+                    const cellContent = cell.value ? (typeof cell.value === 'object' ? cell.value.content[0].content[0].text : cell.value) : "";
+                    tableHtml += `<td style="border: 1px solid #000; padding: 8px;">${cellContent}</td>`;
+                } else {
+                    console.error(`Cell ${cellKey} has unexpected structure or missing value.`);
+                    // Handle the error or provide a default value as needed
+                }
+            });
+            tableHtml += "</tr>";
+        }
+    });
+
+    tableHtml += "</table>";
+    console.log(tableHtml);
+    stepsHtml += tableHtml;
+    // Append this HTML to your document as needed
+}
+
+if (block.type === 'TABLE') {
+    if (!block.block || !block.block.cells) {
+        console.error("Missing expected properties for TABLE block:", block);
+        return;
+    }
+
+    const cells = block.block.cells;
+    console.debug("Cell Data:", cells); // Log the cell data to inspect its structure
+
+    const numRows = block.block.rows;
+    const numColumns = block.block.columns;
+    let rotatedTable = [];
+
+    // Create the rotated table
+    for (let r = 0; r < numRows; r++) {
+        let rotatedRow = [];
+        for (let c = numColumns - 1; c >= 0; c--) {
+            const cellKey = `${c}-${r}`;
+            const cell = cells[cellKey];
+            console.debug("Cell:", cell); // Log the cell object to inspect its structure
+
+            if (cell) {
+                if (cell.value && Array.isArray(cell.value.content) && cell.value.content.length > 0) {
+                    // Find and extract the text content from the cell's paragraphs
+                    const paragraphs = cell.value.content;
+                    let cellContent = "";
+
+                    for (const paragraph of paragraphs) {
+                        if (paragraph.content && Array.isArray(paragraph.content) && paragraph.content.length > 0) {
+                            const textContent = paragraph.content[0].text;
+                            cellContent += textContent;
+                        }
+                    }
+                    rotatedRow.push(cellContent);
+                } else {
+                    rotatedRow.push(''); // Empty cell
+                }
+            } else {
+                rotatedRow.push(''); // Empty cell
+            }
+        }
+        rotatedTable.push(rotatedRow);
+    }
+
+    // Generate HTML for the rotated table
+    let tableHtml = '<table border="1" style="width:100%; border-collapse: collapse;">';
+    for (let row = 0; row < rotatedTable.length; row++) {
+        tableHtml += '<tr>';
+        for (let col = 0; col < rotatedTable[row].length; col++) {
+            tableHtml += `<td style="border: 1px solid #000; padding: 8px;">${rotatedTable[row][col]}</td>`;
+        }
+        tableHtml += '</tr>';
+    }
+    tableHtml += '</table>';
+
+    stepsHtml += tableHtml;
+}
+
+                    
+                        
+                        if (block.type === "EXPLANATION") {
+                          stepsHtml += `<h5 style="color: black;">Explanation</h5>`;
+
+                          const entityMap =
+                            block.block.editorContentState.entityMap || {};
+                          let contentArray = [];
+
+                          if (block.block.editorContentState.type === "doc") {
+                            function handleTextContent(contentItems) {
+                              let currentTextStyle = ""; // Reset for each block
+
+                              contentItems.forEach((textItem) => {
+                                if (textItem.type === "text" && textItem.text) {
+                                  let styledText = textItem.text;
+                                  if (currentTextStyle.includes("BOLD")) {
+                                    styledText = `<strong>${styledText}</strong>`;
+                                  }
+                                  if (currentTextStyle.includes("ITALIC")) {
+                                    styledText = `<em>${styledText}</em>`;
+                                  }
+                                  contentArray.push(styledText);
+                                } else if (
+                                  textItem.type === "inlineMath" &&
+                                  textItem.content
+                                ) {
+                                  const mathText =
+                                    textItem.content[0]?.text || "";
+                                  const inlineMathHtml = `<span class="math">\`${mathText}\`</span>`;
+                                  contentArray.push(inlineMathHtml);
+                                } else if (textItem.content) {
+                                  handleTextContent(textItem.content);
+                                }
+
+                                if (
+                                  textItem.inlineStyleRanges &&
+                                  textItem.inlineStyleRanges.length
+                                ) {
+                                  textItem.inlineStyleRanges.forEach(
+                                    (styleRange) => {
+                                      if (styleRange.style === "BOLD") {
+                                        currentTextStyle += "BOLD ";
+                                      } else if (
+                                        styleRange.style === "ITALIC"
+                                      ) {
+                                        currentTextStyle += "ITALIC ";
+                                      }
+                                    },
+                                  );
+                                }
+                              });
+                            }
+
+                            const blocks =
+                              block.block.editorContentState.content || [];
+                            handleTextContent(blocks);
+
+                            const combinedContent = contentArray.join("");
+                            stepsHtml += `<p style="text-align: left;">${combinedContent}</p>`;
+                          } else {
+                            const blocks =
+                              block.block.editorContentState.blocks;
+                            blocks.forEach((blockItem) => {
+                              let entityProcessed = false;
+
+                              if (
+                                blockItem.entityRanges &&
+                                blockItem.entityRanges.length
+                              ) {
+                                blockItem.entityRanges.forEach(
+                                  (entityRange) => {
+                                    const entityKey =
+                                      entityRange.key.toString();
+                                    const entity = entityMap[entityKey];
+
+                                    if (
+                                      entity &&
+                                      entity.data &&
+                                      entity.data.text
+                                    ) {
+                                      contentArray.push(
+                                        `<span class="math">\`${entity.data.text}\`</span><br>`,
+                                      );
+                                      entityProcessed = true;
+                                    }
+                                  },
+                                );
+                              }
+
+                              if (!entityProcessed && blockItem.text) {
+                                contentArray.push(blockItem.text);
+                              }
+                            });
+
+                            const combinedContent = contentArray.join("");
+                            stepsHtml += `<p style="text-align: left;">${combinedContent}</p>`;
+                          }
+                        }
+
+                        // The final HTML is in stepsHtml
+
+                        // Initialize the 'stepsHtml' variable
+                        // let stepsHtml = '';
+                        if (block.type === "CHEMISTRY") {
+                          console.log("CHEMISTRY block properties:", block);
+
+                          if (
+                            block.block &&
+                            Array.isArray(block.block.shapes)
+                          ) {
+                            const shapes = block.block.shapes; // Access the shapes array
+
+                            // Check if there are shapes in the array
+                            if (shapes.length > 0) {
+                              // Iterate through the shapes array
+                              shapes.forEach((shape) => {
+                                // Process each shape based on its type
+                                if (
+                                  shape.type === "InlineChemShape" &&
+                                  shape.value &&
+                                  shape.value[0]
+                                ) {
+                                  const chemistryText = shape.value[0].text;
+                                  const chemistryHtml = `<span class="chemistry" style="position: absolute; left: ${shape.x}px; top: ${shape.y}px; width: ${shape.w}px; height: ${shape.h}px;">${chemistryText}</span>`;
+                                  stepsHtml += chemistryHtml;
+                                } else if (
+                                  shape.type === "Bond" ||
+                                  shape.type === "CompoundShape"
+                                ) {
+                                  // Debugging: Log the properties of the bond or compound shape
+                                  console.log(
+                                    `Debug - Shape Type: ${shape.type}, Coordinates: (${shape.x}, ${shape.y}), Width: ${shape.w}, Height: ${shape.h}, Rotation: ${shape.rotation}, Style:`,
+                                    shape.style,
+                                  );
+
+                                  // Here, you can process other types of shapes as needed
+                                  const bondHtml = `<div class="shape" style="position: absolute; left: ${shape.x}px; top: ${shape.y}px; width: ${shape.w}px; height: ${shape.h}px; transform: rotate(${shape.rotation}deg);"></div>`;
+                                  stepsHtml += bondHtml;
+                                } else {
+                                  console.error(
+                                    "Invalid chemistry shape:",
+                                    shape,
+                                  );
+                                }
+                              });
+                            } else {
+                              console.error(
+                                "CHEMISTRY block shapes array is empty.",
+                              );
+                            }
+                          } else {
+                            console.error(
+                              "CHEMISTRY block does not contain valid shapes data.",
+                            );
+                          }
+                        } else {
+                          console.log("Not a CHEMISTRY block");
+                        }
+
+                        // 'stepsHtml' now contains the HTML representation of the chemistry content
+                        //   console.log("stepsHtml:", stepsHtml);
+
+                        if (block.type === "DRAWING") {
+                          const viewBox = block.block.settings.viewBox;
+                          stepsHtml += `<svg viewBox="${viewBox.x} ${viewBox.y} ${viewBox.w} ${viewBox.h}">`;
+
+                          const processShape = (shape) => {
+                            switch (shape.type) {
+                              case "Line":
+                                const [startPoint, endPoint] = shape.points;
+                                const dashArray =
+                                  shape.style && shape.style.strokeDasharray
+                                    ? `stroke-dasharray:${shape.style.strokeDasharray};`
+                                    : "";
+                                stepsHtml += `<line x1="${
+                                  startPoint.x + shape.x
+                                }" y1="${startPoint.y + shape.y}" x2="${
+                                  endPoint.x + shape.x
+                                }" y2="${
+                                  endPoint.y + shape.y
+                                }" style="stroke:black;stroke-width:2;${dashArray}" />`;
+                                break;
+
+                              case "Square":
+                                stepsHtml += `<rect x="${shape.x}" y="${shape.y}" width="${shape.w}" height="${shape.h}" style="fill:none;stroke:black;stroke-width:2" />`;
+                                break;
+                              case "Text":
+                                stepsHtml += `<text x="${shape.x}" y="${shape.y}" font-size="${shape.style.fontSize}">${shape.value[0].text}</text>`;
+                                break;
+
+                              case "Arrow":
+                                const [arrowStart, arrowEnd] = shape.points;
+                                stepsHtml += `<line x1="${
+                                  arrowStart.x + shape.x
+                                }" y1="${arrowStart.y + shape.y}" x2="${
+                                  arrowEnd.x + shape.x
+                                }" y2="${
+                                  arrowEnd.y + shape.y
+                                }" style="stroke:black;stroke-width:2" marker-end="url(#arrowhead)" />`;
+                                break;
+                              case "CartesianChartTicks":
+                                // For simplicity, let's draw it as a rectangle. Adjust as needed.
+                                stepsHtml += `<rect x="${shape.x}" y="${shape.y}" width="${shape.w}" height="${shape.h}" style="fill:none;stroke:black;stroke-width:${shape.style.strokeWidth}" />`;
+                                break;
+                              case "CurvedLine":
+                                // Assuming shape.points[0] is the start point,
+                                // shape.points[1] and shape.points[2] are the control points,
+                                // shape.points[3] is the end point
+                                const [start, control1, control2, end] =
+                                  shape.points;
+                                stepsHtml += `<path d="M ${start.x + shape.x},${
+                                  start.y + shape.y
+                                } C ${control1.x + shape.x},${
+                                  control1.y + shape.y
+                                } ${control2.x + shape.x},${
+                                  control2.y + shape.y
+                                } ${end.x + shape.x},${
+                                  end.y + shape.y
+                                }" fill="none" stroke="black" stroke-width="2"/>`;
+                                break;
+
+                              case "Rect":
+                                console.log(shape); // Check the actual values
+                                stepsHtml += `<rect x="${shape.x}" y="${shape.y}" width="${shape.w}" height="${shape.h}" style="fill:none;stroke:black;stroke-width:2" />`;
+                                break;
+
+                                stepsHtml += `<rect x="${shape.x}" y="${shape.y}" width="${shape.w}" height="${shape.h}" style="fill:none;stroke:black;stroke-width:2" />`;
+                                break;
+                              case "Ellipse":
+                                const rx = shape.w / 2;
+                                const ry = shape.h / 2;
+                                const cx = shape.x + rx;
+                                const cy = shape.y + ry;
+                                stepsHtml += `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" style="fill:none;stroke:black;stroke-width:2" />`;
+                                break;
+                              case "Polygon":
+                                const pointsStr = shape.points
+                                  .map(
+                                    (p) => `${p.x + shape.x},${p.y + shape.y}`,
+                                  )
+                                  .join(" ");
+                                stepsHtml += `<polygon points="${pointsStr}" style="fill:none;stroke:black;stroke-width:2" />`;
+                                break;
+                              case "Circle":
+                                const radius = shape.w / 2; // Assuming width and height are equal
+                                const centerX = shape.x + radius;
+                                const centerY = shape.y + radius;
+                                stepsHtml += `<circle cx="${centerX}" cy="${centerY}" r="${radius}" style="fill:none;stroke:black;stroke-width:2" />`;
+                                break;
+
+                              case "CompoundShape":
+                                if (Array.isArray(shape.shapes)) {
+                                  shape.shapes.forEach((innerShape) =>
+                                    processShape(innerShape),
+                                  );
+                                }
+                                break;
+
+                              // Add other shape handlers as needed...
+                            }
+                          };
+
+                          block.block.shapes.forEach((shape) => {
+                            processShape(shape);
+                          });
+
+                          // Arrowhead marker definition (for arrows). This should be defined once in the SVG.
+                          stepsHtml += `
+<defs>
+<marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L0,7 L10,3.5 z" fill="#000" />
+</marker>
+</defs>
+`;
+
+                          stepsHtml += `</svg>`;
+                        }
+
+                        // Initialize a counter for equation IDs
+
+                        let svgDetails = {
+                          "SVG Image Mapping": [],
+                          "SVG Scaling & Positioning": [],
+                          "Complexity of SVGs": "",
+                        };
+                        if (
+                          block.type === "inlineMath" &&
+                          block.mathType &&
+                          block.content
+                        ) {
+                          let equationHTM1L = "<p><strong>Equation:</strong> ";
+                          equationHTM1L = `<span class="math">\`${block.content}\`</span><br>`;
+                          stepsHtml += equationHTM1L;
+                        }
+
+                        if (block.type === "EQUATION_RENDERER") {
+                          const lines = block.block.lines;
+                          let equationHTML = "<p><strong>Equation:</strong> ";
+
+                          lines.forEach((line, index) => {
+                            // Correctly formatted AsciiMath syntax with backticks as delimiters for inline math
+                            equationHTML += `<span class="math">\`${line.left} ${line.operator} ${line.right}\`</span>`;
+                            if (index < lines.length - 1) {
+                              equationHTML += " "; // Add a space instead of a line break between equations
+                            }
+                          });
+
+                          equationHTML += "</p>";
+                          stepsHtml += equationHTML;
+                        }
+
+                        if (block.type === "asciimath") {
+                          if (block.content) {
+                            // Assuming 'content' contains the math data for the asciimath block
+                            stepsHtml += `<span class="math">${
+                              block.content.left || ""
+                            } ${block.content.operator || ""} ${
+                              block.content.right || ""
+                            }</span>`;
+                          }
+                        }
+                        if (block.type === "paragraph") {
+                          if (block.content && block.content.length) {
+                            // Assuming 'content' is an array of text elements for the paragraph block
+                            block.content.forEach((contentItem) => {
+                              if (contentItem.type === "text") {
+                                stepsHtml += `${contentItem.text}`;
+                              }
+                            });
+                          }
+                        }
+                        if (block.type === "CIRCUIT") {
+                          const circuitShapes = block.block.shapes || [];
+                          const circuitImages = circuitShapes
+                            .map((shape) => {
+                              if (
+                                shape.SVGShapeName &&
+                                svgImageMapping[shape.SVGShapeName]
+                              ) {
+                                // Extract SVG Image Mapping details
+                                svgDetails["SVG Image Mapping"].push({
+                                  type: shape.SVGShapeName,
+                                  src: svgImageMapping[shape.SVGShapeName],
+                                });
+
+                                // Extract SVG Scaling & Positioning details
+                                svgDetails["SVG Scaling & Positioning"].push({
+                                  scaleX: shape.scaleX || 1,
+                                  scaleY: shape.scaleY || 1,
+                                  x: shape.x || 0,
+                                  y: shape.y || 0,
+                                  points: shape.points || [],
+                                });
+
+                                // Returns the image for the shape.
+                                return `<li><img src="${
+                                  svgImageMapping[shape.SVGShapeName]
+                                }" alt="Circuit Image" /></li>`;
+                              }
+                              return "";
+                            })
+                            .filter(Boolean);
+
+                          if (circuitImages.length > 0) {
+                            stepsHtml += "<div>Circuit Blocks:</div>";
+                            stepsHtml += "<ul>";
+                            stepsHtml += circuitImages.join("");
+                            stepsHtml += "</ul>";
+                          }
+                        }
+
+                        // Determining Complexity of SVGs
+                        const num_elements = (block.block.shapes || []).length;
+                        if (num_elements <= 5) {
+                          svgDetails["Complexity of SVGs"] = "Simple";
+                        } else if (num_elements <= 10) {
+                          svgDetails["Complexity of SVGs"] = "Moderate";
+                        } else {
+                          svgDetails["Complexity of SVGs"] = "Complex";
+                        }
+                        //stepsHtml += svgDetailsHtml;
+                        // Output the SVG details
+                        console.log(svgDetails);
+
+                        if (block.type === "IMAGE_UPLOAD") {
+                          if (block.block.imagePath) {
+                            // Assuming 'imagePath' is the property containing the image URL
+                            stepsHtml += `<img src="${block.block.imagePath}" alt="Image"><br>`;
+                          }
+                        }
+                      });
+                    });
+
+                    // answerHtml1=stepsHtml1;
+                    console.log(answerHtml);
+                    answerHtml = stepsHtml + finalAnswerDiv;
+                  } catch (error) {
+                    // Handle the error here.
+                    console.error(error);
+                  }
+                }
+              } catch (error) {
+                console.error("Error processing EC Answers:", error);
+              }
+            } catch (error) {
+              // Handle any errors here
+              console.error(error);
+          }
+              // Check if the message content starts with the Chegg URL pattern
+              if (
+                message.content.startsWith(
+                  "https://www.chegg.com/homework-help/questions-and-answers/",
+                )
+              ) {
+                // Delete the message containing the URL after 20 seconds
+                setTimeout(() => {
+                  message
+                    .delete()
+                    .then(() => {
+                      console.log(
+                        "Message deleted after 20 seconds because it started with the Chegg URL pattern.",
+                      );
+                    })
+                    .catch(console.error);
+                }, 20000); // 20,000 milliseconds = 20 seconds
+              }
+
+              // Assuming you've already configured the AWS SDK
+              // ...
+              
+                fs.readFile('Q&A.html', 'utf-8', async (err, data) => {
+                  if (err) {
+                    console.error(err);
+                    return;
+                  }
+                
+                  let updatedContent = data
+                    .replace('{{Link}}', url_chegg)
+                    .replace('{{authorNickname}}', authorNickname)
+                    .replace('{{answers_wrap}}', answerHtml)
+                    .replace('{{authorAnswerCount}}', authorAnswerCount);
+                
+                  const newName = crypto.randomBytes(16).toString('hex');
+                  const filePath = `./${newName}.html`;
+                
+                  fs.writeFile(filePath, updatedContent, 'utf-8', async (err) => {
+                    if (err) {
+                      console.error(err);
+                      return;
+                    }
+                
+                    const embed = new MessageEmbed()
+                      .setColor(getRandomColor())
+                      .setTitle('Chegg Q&A Unlocked')
+                      .setThumbnail(getRandomThumbnailUrl())
+                      .setAuthor({
+                        name: message.author.username,
+                        iconURL: message.author.avatarURL()
+                      })
+                      .addField('For', message.author.toString(), true)
+                      .addField('Question', `[View Question](${url_chegg})`, true)
+                      .setImage('https://cdn.discordapp.com/attachments/1093746006241329252/1186381745424191568/standard_1.gif')
+                      .setFooter('C3gg Unlock v1', 'https://cdn.discordapp.com/attachments/1093746006241329252/1186391457238634556/a-chegg-unlock-icon-egg-83578698.png');
+                
+                    if (typeof likeCount === 'string' && likeCount.trim() !== '') {
+                      embed.addField('👍', likeCount, true);
+                    }
+                
+                    if (typeof dislikeCount === 'string' && dislikeCount.trim() !== '') {
+                      embed.addField('👎', dislikeCount, true);
+                    }
+                
+                    const row = new MessageActionRow().addComponents(
+                      new MessageButton()
+                        .setStyle('LINK')
+                        .setURL(url_chegg)
+                        .setLabel('View on Chegg')
+                    );
+                
+                    const attachment = new MessageAttachment(filePath, 'Answer.html');
+                
+                    message.channel.send({
+                      embeds: [embed],
+                      components: [row],
+                      files: [attachment]
+                    }).then(() => {
+                      fs.unlink(filePath, (err) => {
+                        if (err) console.error('Failed to delete local file:', err);
+                      });
+                    }).catch(console.error);
+                  });
+                });
+                
+              fetchAndUpdateReviewCounts();
+                  // Function to get current time in IST
+                  function getCurrentTimeIST() {
+                    return moment().tz('Asia/Kolkata').format('YYYY-MM-DD HH:mm:ss');
+                  }
+
+                  // Function to get a random thumbnail URL
+                  function getRandomThumbnailUrl() {
+                    const gifUrls = [
+                      'https://cdn.discordapp.com/attachments/1093746006241329252/1186392077790085120/icon.png',
+
+                    ];
+                    const randomIndex = Math.floor(Math.random() * gifUrls.length);
+                    return gifUrls[randomIndex];
+                  }
+
+                  // Function to generate a random color
+                  function getRandomColor() {
+                    const colors = [
+                      '#0099ff', '#ff9900', '#00ff99', '#9900ff', '#ff0099', '#99ff00',
+                        '#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff',
+                        '#c0c0c0', '#808080', '#800000', '#808000', '#008000', '#800080',
+                        '#008080', '#000080', '#a52a2a', '#ffa07a', '#20b2aa', '#ff7f50',
+                        '#f08080', '#db7093', '#7fff00', '#7fffd4', '#00ced1', '#40e0d0',
+                        '#9370db', '#f0e68c', '#dda0dd', '#b0e0e6', '#ff4500', '#da70d6',
+                        '#eee8aa', '#98fb98', '#afeeee', '#db7093'
+                    ];
+                    const randomIndex = Math.floor(Math.random() * colors.length);
+                    return colors[randomIndex];
+                  }
+
+
+                  }
+                }
+              }else if (
+          url_chegg.startsWith("https://www.chegg.com/homework-help/")
+        ) {
+          console.log("Textbook Solutions");
+          const options = {
+            url: `${url_chegg}`,
+            headers: headers,
+            gzip: true,
+          };
+          request(options, callback);
+          function callback(error, response, body) {
+            if (!error && response.statusCode == 200) {
+              const regex = /"isbn13":"(\d+)"/;
+              const match = body.match(regex);
+
+              const regexx = /"problemId":"(\d+)"/;
+              const matchh = body.match(regexx);
+
+              const ean = match ? match[1] : null;
+              const problemId = matchh ? matchh[1] : null;
+
+              if (ean && problemId) {
+                const dataStringg = `{"operationName":"SolutionContent","variables":{"ean":"${ean}","problemId":"${problemId}"},"extensions":{"persistedQuery":{"version":1,"sha256Hash":"0322a443504ba5d0db5e19b8d61c620d5cab59c99f91368c74dcffdbea3e502f"}}}`;
+                const optionss = {
+                  url: "https://gateway.chegg.com/one-graph/graphql",
+                  method: "POST",
+                  headers: headers,
+                  gzip: true,
+                  body: dataStringg,
+                };
+                request(optionss, callbackk);
+              } else {
+                console.log(
+                  "Failed to extract ean and problemId from the response.",
+                );
+              }
+            }
+          }
+
+          function callbackk(error, response, body) {
+            if (!error && response.statusCode == 200) {
+              const jsonData = JSON.parse(body);
+
+              if (
+                jsonData &&
+                jsonData.data &&
+                jsonData.data.tbsSolutionContent
+              ) {
+                const steps = jsonData.data.tbsSolutionContent[0].stepsLink;
+                var answerHtml = "";
+
+                for (let i = 0; i < steps.length; i++) {
+                  const html = steps[i].html;
+                  answerHtml = answerHtml + html;
+                }
+                fs.readFile("TXTBK.html", "utf-8", (err, data) => {
+                  if (err) {
+                    console.error(err);
+                    return;
+                  }
+
+                  let updatedContent = data
+                    .replace("{{Link}}", url_chegg)
+                    .replace("{{answers_wrap}}", answerHtml);
+
+                  // Generate a random file name for the HTML file.
+                  const newName = crypto.randomBytes(16).toString("hex");
+                  const filePath = `./${newName}.html`;
+
+                  fs.writeFile(filePath, updatedContent, "utf-8", async (err) => {
+                     if (err) {
+                       console.error(err);
+                       return;
+                     }
+
+                     console.log("HTML file created successfully!");
+
+                     // Upload the file to S3 and get the signed URL
+                     const fileContent = fs.readFileSync(filePath);
+                     const params = {
+                       Bucket: "globallo",
+                       Key: `${newName}.html`,
+                       Body: fileContent,
+                       ContentType: "text/html",
+                     };
+
+                     s3.putObject(params, (s3Err, data) => {
+                       if (s3Err) {
+                         console.error(s3Err);
+                         return;
+                       }
+                       console.log(
+                         `File uploaded successfully to ${params.Bucket}/${params.Key}`,
+                       );
+
+                       // Generate the presigned URL for the 'View in Browser' action
+                       const urlParams = {
+                         Bucket: "globallo",
+                         Key: `${newName}.html`,
+                         Expires: 1800, // URL expires in 30 minutes
+                       };
+
+                       s3.getSignedUrl(
+                         "getObject",
+                         urlParams,
+                         (err, presignedUrl) => {
+                           if (err) {
+                             console.error(err);
+                             return;
+                           }
+                           console.log(`Presigned URL: ${presignedUrl}`);
+                           const gifUrls = [
+                             "https://c.tenor.com/U2qUkU-adhMAAAAC/discord-pfp.gif",
+                             "https://www.gifcen.com/wp-content/uploads/2021/06/discord-gif-3.gif",
+                             "https://www.icegif.com/wp-content/uploads/icegif-1279.gif",
+                             "https://media.tenor.com/bkuC7KDxqUcAAAAC/discord-nsfw.gif",
+                             "https://lh5.googleusercontent.com/proxy/ngeXC3z5-3UQC7T21ONV3iLFFgL8lngiwMjxU1UEsAhok7cMEJ551y0aLRZD4-4Z7MYJACkgg-6jslrQrEboNHBHltmZ_SLVid8FnGkm22qxytPiKWoDs5WL-IWp_Vet=w1600",
+                             "https://www.gifcen.com/wp-content/uploads/2021/06/discord-gif-12.gif",
+                             "https://tealcreations.weebly.com/uploads/1/2/6/0/126000989/da0563-3v2_orig.gif",
+                             "https://i.pinimg.com/originals/6b/85/6d/6b856dd96d16b2ba2e8622b4da9238c8.gif",
+                             "https://media.tenor.co/images/5c27d0eb88c30b11617ac798ca6d6e0d/raw",
+                             "https://www.beaude.net/no-flux/wp-content/uploads/2015/07/dLYfYLBGDmmQ3DSWcfNk8Q-default_x2.gif",
+                             "https://giffiles.alphacoders.com/119/119824.gif",
+                             "https://i.pinimg.com/originals/ae/6d/b1/ae6db1d8b7c25314c19b5e93a5c5ea08.gif",
+                             "https://i.makeagif.com/media/7-18-2015/QeqOop.gif",
+                             "https://media.tenor.co/images/c56c096360a63b1ecc874fe70e050ce1/raw",
+                             "https://media.tenor.com/images/2592d59f78fc18b6c6143d5239d0e7be/tenor.gif",
+                             "https://wp.usatodaysports.com/wp-content/uploads/sites/90/2013/12/ronaldo.gif",
+                             "https://i.pinimg.com/originals/6a/83/f7/6a83f7c62df9dd4c25c2d5af898e239a.gif",
+                             "https://www.anorak.co.uk/wp-content/gallery/gifs-diving-footballers/dive-football-2.gif",
+                             "https://c.tenor.com/lYoWT43XM-MAAAAC/cristiano-ronaldo-ronaldo.gif",
+                             "https://c.tenor.com/RC6Y76J64IgAAAAC/shakira-live-performance.gif",
+                             "https://media.tenor.com/images/d703f304bc9ec57cd570fb21b17aa0d8/tenor.gif",
+                             "https://media1.tenor.com/images/d3b60746611b8c4613d51e4f9563362b/tenor.gif",
+                             "https://i.pinimg.com/originals/b8/64/6f/b8646f2b98b7e8ddc3d85576a9d08da8.gif",
+                             "https://media.tenor.com/E7yLJ8Gd10sAAAAM/kid-rap.gif",
+
+                             // Add more thumbnail URLs here
+                           ];
+                           function getCurrentTimeIST() {
+                             return moment()
+                               .tz("Asia/Kolkata")
+                               .format("YYYY-MM-DD HH:mm:ss");
+                           }
+                           // Function to get a random thumbnail URL
+                           function getRandomThumbnailUrl() {
+                             const randomIndex = Math.floor(
+                               Math.random() * gifUrls.length,
+                             );
+                             return gifUrls[randomIndex];
+                           }
+                           const gifUrl = "https://makeagif.com/i/LcOQv0";
+                           const colors = [
+                             "#0099ff",
+                             "#ff9900",
+                             "#00ff99",
+                             "#9900ff",
+                             "#ff0099",
+                             "#99ff00",
+                             "#ff0000",
+                             "#00ff00",
+                             "#0000ff",
+                             "#ffff00",
+                             "#ff00ff",
+                             "#00ffff",
+                             "#c0c0c0",
+                             "#808080",
+                             "#800000",
+                             "#808000",
+                             "#008000",
+                             "#800080",
+                             "#008080",
+                             "#000080",
+                             "#a52a2a",
+                             "#ffa07a",
+                             "#20b2aa",
+                             "#ff7f50",
+                             "#f08080",
+                             "#db7093",
+                             "#7fff00",
+                             "#7fffd4",
+                             "#00ced1",
+                             "#40e0d0",
+                             "#9370db",
+                             "#f0e68c",
+                             "#dda0dd",
+                             "#b0e0e6",
+                             "#ff4500",
+                             "#da70d6",
+                             "#eee8aa",
+                             "#98fb98",
+                             "#afeeee",
+                             "#db7093",
+                           ];
+
+                           // Function to generate a random color
+                           function getRandomColor() {
+                             const randomIndex = Math.floor(
+                               Math.random() * colors.length,
+                             );
+                             return colors[randomIndex];
+                           }
+                           // Create the embed
+                           function sendMessageWithRandomColor() {
+                             const embed = new MessageEmbed()
+                               .setColor(getRandomColor())
+                               .setTitle("egg premium!")
+                               //  .setDescription('Click the button below to view your solution.')
+                               .setImage(
+                                 "https://cdn.discordapp.com/attachments/1093746006241329252/1186381745424191568/standard_1.gif",
+                               ) // Set the image in the embed
+
+                               .setThumbnail(getRandomThumbnailUrl()) // Set the thumbnail URL
+                               .setAuthor({
+                                 name: message.author.username, // Set the author's name
+                                 iconURL: message.author.avatarURL(), // Set the author's icon URL
+                               })
+                               .addField("Current Time (IST)", getCurrentTimeIST()) // Add the current time field
+                               .setFooter("TXTbook solution");
+
+                             // Create a button for the embed
+                             const row = new MessageActionRow().addComponents(
+                               new MessageButton()
+                                 .setStyle("LINK")
+                                 .setURL(presignedUrl) // Presigned URL for viewing the solution
+                                 .setLabel("Answer url")
+                                 .setEmoji("🔗"),
+
+                             );
+
+                             // Create the attachment for the file
+                             //  const attachment = new MessageAttachment(filePath, 'Answer.html');
+
+                             // Send the message with the embed, button, and attachment
+                             message.channel
+                               .send({
+                                 //  content: `Hi ${message.author}!\nYour solution is here 📥`,
+                                 embeds: [embed],
+                                 components: [row], // Assuming 'row' is defined elsewhere
+                                 //  files: [attachment]
+                               })
+                               .then(() => {
+                                 // Handle success
+                                 fs.unlink(filePath, (err) => {
+                                   // Optionally delete the file locally after sending
+                                   if (err) console.error(err);
+                                   else
+                                     console.log(
+                                       `Deleted local file: ${filePath}`,
+                                     );
+                                 });
+                               })
+                               .catch((error) => {
+                                 console.error(error);
+                               });
+                           }
+                           sendMessageWithRandomColor();
+                         },
+                       );
+                     });
+                   });
+                });
+              } else {
+                console.log("Failed to extract steps from GraphQL response.");
+              }
+            }
+          }
+        } else {
+          console.log("Failed to extract steps from GraphQL response.");
+        }
+      }
+    }
+  } else if (message.attachments.size > 0) {
+    // If there are attachments, check if the user is trying to add a cookie.
+    const attachment = message.attachments.first();
+    const attachmentUrl = attachment.url;
+
+    // Download the attached file.
+    request.get(attachmentUrl, async (error, response, body) => {
+      if (!error && response.statusCode === 200) {
+        // Save the cookie content to a file.
+        fs.appendFile("cookie.txt", body, "utf-8", async (err) => {
+          if (err) {
+            console.error(err);
+          } else {
+            console.log(
+              'Content of "cookie.txt" is successfully added to "cookie1.txt"',
+            );
+
+            // You can add the logic to store this cookie in your database if needed.
+            // Example: await storeCookieInDatabase(body);
+
+            // Send a success message to the user.
+            const successEmbed = new Discord.MessageEmbed()
+              .setTitle("Success")
+              .setDescription("Cookie is successfully added")
+              .setColor(0x35ec08);
+
+            message.channel.send({ embeds: [successEmbed] });
+          }
+        });
+      } else {
+        console.error(`Failed to download the attachment: ${error}`);
+      }
+    });
+  }
+});
+
+client.login(token);
